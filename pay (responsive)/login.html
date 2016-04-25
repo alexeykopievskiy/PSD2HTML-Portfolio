@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="b-login">
+    <div class="b-login__container">
+		<div class="b-container__color">
+			<div class="b-color__blue"></div>
+			<div class="b-color__aqua"></div>
+			<div class="b-color__yellow"></div>
+			<div class="b-color__pink"></div>
+		</div>
+		<div class="b-container__input b-block-login">
+			<form action="">
+				<input type="text" class="b-form__input" placeholder="Логин">
+				<input type="password" class="b-form__input" placeholder="Пароль">
+				<a href="" class="b-form__enter">Вход</a>
+        <div class="b-form__register">Регистрация</div>
+        <p class="b-form__forget">Забыли пароль?</p>
+			</form>
+		</div>
+    <div class="b-container__input b-block-register">
+			<form action="">
+        <div class="b-radio__client">
+          <input type="radio" id="r1" name="rr" />
+          <label for="r1"><span></span>Я заказчик</label>
+        </div>
+        <div class="b-radio__performer">
+          <input type="radio" id="r2" name="rr" />
+          <label for="r2"><span></span>Я исполнитель</label>
+        </div>
+				<input type="email" class="b-form__input b-reg" placeholder="Адрес эл.почты">
+				<input type="text" class="b-form__input b-reg" placeholder="Логин">
+        <input type="password" class="b-form__input b-reg" placeholder="Пароль">
+        <input type="password" class="b-form__input b-reg" placeholder="Повторите пароль">
+        <div class="b-form__register b-form__reg b-reg__margin"><a href="">Регистрация</a></div>
+        <div class="b-page__clear"></div>
+			</form>
+		</div>
+    <div class="b-container__input b-block-forgot">
+			<form action="">
+				<input type="email" class="b-form__input b-reg" placeholder="Адрес эл.почты">
+        <div class="b-form__forgot-btn"><a href="">Регистрация</a></div>
+        <div class="b-page__clear"></div>
+			</form>
+		</div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".b-form__register").click(function(){
+          $(".b-block-login").hide();
+          $(".b-block-register").show();
+        });
+        $(".b-form__forget").click(function(){
+          $(".b-block-login").hide();
+          $(".b-block-register").hide();
+          $(".b-block-forgot").show();
+        });
+      });
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1159 @@
+@import "messages.css" screen; /* Стиль для вывода результата на монитор */
+@import "message_group.css" screen; /* Стиль для вывода результата на монитор */
+@import "resourses.css" screen; /* Стиль для вывода результата на монитор */
+@import "flot.css" screen; /* Стиль для вывода результата на монитор */
+@import "friends.css" screen; /* Стиль для вывода результата на монитор */
+@import "msg_index.css" screen; /* Стиль для вывода результата на монитор */
+* {
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dialog_block{
+    display: block!important;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: url(../img/bg.jpg) no-repeat, black;
+    background-position: -300px 50%;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'DINPro Regular';
+}
+
+.main-wrap {
+    width: 100%;
+    height: 100%;
+    min-width: 590px;
+    min-height: 395px;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+p, a, ul, li, input, label, button, textarea {
+    margin: 0;
+    padding: 0;
+}
+a img {
+    border: none;
+}
+ul {
+    list-style: none;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.wrap {
+    margin: auto;
+    width: 960px;
+}
+.clear{
+    clear: both;
+}
+a{
+    text-decoration: none;
+}
+input{
+    color: white;
+}
+
+/* Header
+------------------------------------------------------------------------------------ */
+
+p {
+    color: white;
+}
+
+/* Top-panel
+------------------------------------------------------------------------------------ */
+.top_panel {
+    width: 100%;
+    height: 62px;
+    background: url(../img/top_bg.png) repeat-x;
+    position: absolute;
+    z-index: 5;
+}
+.planet-change {
+    position: relative;
+    float: left;
+    width: 204px;
+    height: 89px;
+    background: url(../img/planet_info.png);
+    margin-right: 30px;
+    margin-left: 3px;
+    padding-left: 18px;
+    padding-top: 16px;
+    top: -10px;
+}
+.planet-change-button {
+    width: 170px;
+    height: 57px;
+    display: block;
+}
+.planet-change-button img, .planet-change-button > * {
+    float: left;
+}
+.planet-info {
+    margin-top: 11px;
+}
+.planet-info .planet-name {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.planet-info .planet-cordinat {
+    color: #447293;
+    font-size: 12px;
+}
+.planet-change-button img {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 12px;
+}
+.planet_popup {
+    visibility: hidden;
+    z-index: -1;
+    height: 526px;
+    overflow: hidden;
+}
+.planet_popup.planet_on {
+    visibility: visible;
+}
+.planet_popup {
+    position: absolute;
+    top: 75px;
+    padding: 30px 10px 25px 20px;
+    left: 7px;
+    width: 196px;
+    height: 546px;
+    overflow: hidden;
+    background: url(../img/popup-menu.png) no-repeat;
+}
+.planet_popup_inside {
+    top: 30px;
+    width: 166px;
+    height: 500px;
+    outline: none;
+}
+.planet_popup .planet-change-button {
+    height: 46px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+.planet_popup .planet-change-button:last-child {
+    margin-bottom: 0;
+}
+.planet_popup .planet-change-button img {
+    margin-top: 4px;
+    margin-left: 12px;
+}
+.planet_popup .planet-change-button .planet-info {
+    margin-top: 2px;
+}
+.planet_popup .planet-change-button .planet-info span {
+    color: #638E99;
+}
+.resourses {
+    padding-top: 5px;
+    padding-right: 105px;
+}
+.resourse p {
+    font-size: 14px;
+}
+.resourse .resourse-tip {
+    height: 63px;
+    position: absolute;
+    padding: 10px 10px 5px 10px;
+    background: #000000;
+    margin-top: 45px;
+    border-radius: 3px;
+    margin-left: -70px;
+    z-index: 999;
+}
+.resourse-tip {
+    box-sizing: content-box;
+    visibility: hidden;
+}
+.resourse:hover .resourse-tip {
+    visibility: visible;
+}
+.resourse-tip table tr td:nth-child(1) {
+    text-align: left;
+    color: #7a8788;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    line-height: 17px;
+}
+.resourse-tip table tr {
+    height: 17px !important;
+}
+.resourse-tip table tr td {
+    height: 17px !important;
+}
+.resourse-tip table tr td:nth-child(2) {
+    white-space: nowrap;
+    color: #ffffff;
+    line-height: 17px;
+    padding: 0 0 0 20px;
+    margin: 0;
+    text-align: right;
+    font-size: 12px;
+}
+
+.top_panel .resourses .resourse {
+    height: 52px;
+    padding: 0 10px;
+    float: left;
+    color: #ffffff;
+    position: relative;
+}
+
+.top_panel .resourses .resourse img {
+    position: absolute;
+    top: 1px;
+    left: -48px;
+}
+
+.resourse {
+    border: 0 !important;
+    height: 52px;
+    background: url(../img/resource_bg-center-ie.png) repeat-x;
+    margin-right: 88px;
+}
+
+.last-resourse-block {
+    margin-right: 14px;
+}
+
+.resourse:nth-child(1) {
+    margin-left: 57px;
+}
+
+.resourse p {
+    padding-top: 12px;
+    position: relative;
+}
+
+.resourse img {
+    z-index: 1000;
+    margin-top: 12px;
+    margin-left: 3px;
+}
+
+.resourse p:before {
+    position: absolute;
+    margin-left: -80px;
+    margin-top: -12px;
+    content: url(../img/resource_bg_left_ie.png);
+}
+
+.resourse p:after {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -12px;
+    content: url(../img/resource_bg_right_ie.png);
+}
+
+.resourse.last-resourse-block p:after {
+    content: url(../img/resource_bg_right_ie_last.png);
+}
+
+.resourse:nth-child(1) p:before {
+    position: absolute;
+    margin-left: -80px;
+    margin-top: -12px;
+    content: url(../img/resource_bg_left_ie_first.png) !important;
+}
+
+.resourse .resourse-tip {
+    margin-top: 57px;
+}
+
+
+
+/* Sidebar menu
+------------------------------------------------------------------------------------ */
+.sidebar_menu {
+    float: left;
+    width: 270px;
+    margin-top: 62px;
+    margin-left: 7px;
+    position: relative;
+}
+.sidebar_menu ul {
+    background: rgba(0, 16, 28, .8);
+}
+.sidebar_menu li {
+    width: 100%;
+    height: 46px;
+}
+.sidebar_menu li a {
+    position: absolute;
+    width: 232px;
+    height: 46px;
+    padding-left: 25px;
+    padding-right: 12px;
+    line-height: 46px;
+    text-decoration: none;
+}
+.sidebar_menu li a p {
+    float: left;
+    font-size: 14px;
+    color: white;
+}
+.sidebar_menu li a .img_container {
+    width: 35px;
+    float: right;
+    text-align: center;
+    padding-top: 9px;
+    line-height: 30px;
+}
+.sidebar_menu li a .img_container img {
+    display: inline-block;
+}
+.sidebar_menu li a .img_container img.hover_img {
+    display: none;
+}
+.sidebar_menu li a:hover {
+    padding-left: 25px;
+    padding-right: 27px;
+    left: -25px;
+    background: url(../img/sidebar_item_bg.png) no-repeat;
+    width: 253px;
+}
+.sidebar_menu li a:hover p {
+    color: #70dae3;
+}
+.sidebar_menu li a:hover img.hover_img {
+    display: inline-block;
+}
+.sidebar_menu li a:hover img.standart_img {
+    display: none;
+}
+
+.sidebar_menu li a:hover .img_container {
+    margin-right: -6px;
+}
+
+.sidebar_menu li a:hover p {
+    padding-left: 12px;
+}
+
+/* fix */
+
+.sidebar_menu ul {
+    margin-top: 30px;
+    background-color: none;
+    background: url(../img/sidebar_menu_bg_mid_ie.png) repeat-y;
+    position: relative;
+}
+.sidebar_menu ul:after {
+    position: absolute;
+    bottom: -10px;
+    content: url(../img/sidebar_menu_bg_bot_ie.png);
+}
+.sidebar_menu ul:before {
+    position: absolute;
+    content: url(../img/sidebar_menu_bg_top_ie.png);
+    top: -30px;
+}
+.sidebar_menu ul a {
+    margin-left: 20px;
+}
+.sidebar_menu ul a:hover {
+    margin-left: 33px;
+}
+
+/* Advanced menu
+------------------------------
+*/
+
+.sidebar_menu_planet_on {
+    width: 87px;
+    margin-left: 195px;
+    border-left: 0px solid red;
+    background: url(../img/small-popup-bg.png) repeat-y;
+}
+.sidebar_menu_planet_on ul {
+    width: 69px;
+    background: none;
+}
+
+.sidebar_menu.sidebar_menu_planet_on ul:before {
+    content: url(../img/mini.png) !important;
+}
+.sidebar_menu.sidebar_menu_planet_on ul:after {
+    content: url(../img/mini2.png) !important;
+}
+
+.sidebar_menu_planet_on ul li a {
+    width: 63px;
+    margin-left: 0px;
+    padding-left: 17px;
+}
+.sidebar_menu_planet_on ul li a p {
+    display: none;
+}
+
+.sidebar_menu_planet_on li a:hover .img_container {
+    margin-left: -30px;
+}
+
+.sidebar_menu_planet_on li a:hover {
+    width: 63px;
+    background: url(../img/item-small.png) no-repeat;
+    z-index: 999;
+    left: 5px;
+    margin-left: 0px;
+}
+
+.sidebar_menu_planet_on li a .img_container {
+    float: left;
+}
+.sidebar_menu_planet_on li a:hover .img_container {
+    float: right;
+    margin-right: -11px;
+}
+
+
+
+/* fleets wrap
+------------------------------------------------------------------------------------ */
+.top_panel .mail {
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 20px;
+    float: left;
+    background: url(../img/mail.png) no-repeat;
+    margin-left: 28px;
+    margin-top: 15px;
+}
+.top_panel .mail p {
+    display: none;
+}
+.top_panel .have_message,
+.top_panel .mail:hover {
+    background-position: 0 -21px;
+}
+
+.top_panel .have_message p {
+    position: absolute;
+    left: 100%;
+    top: -4px;
+    margin-left: -8px;
+    display: inline-block;
+    border-radius: 10px;
+    background: #BE8000;
+    font-size: 9px;
+    line-height: 14px;
+    color: #fff;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-family: 'DINPro-Regular';
+}
+
+/* Flex menu
+------------------------------------------------------------------------------------ */
+.top_panel .menu {
+  list-style: none;
+  height: 60px;
+  overflow: hidden;
+  text-align: right;
+}
+.top_panel .menu a {
+    font-size: 14px;
+    color: white;
+    font-family: 'DINPro Regular';
+    text-decoration: none;
+    border-bottom: 1px solid #264152;
+    line-height: 16px;
+    display: inline-block;
+}
+.top_panel .menu > li {
+  display: inline-block;
+  line-height: 50px;
+  margin-left: 20px;
+}
+.top_panel .menu > li:last-child {
+    margin-left: 0;
+}
+.top_panel .menu > li:first-child {
+    margin-left: 0;
+}
+.flexMenu-popup {
+    border: 2px solid #00ACBB;
+    position: relative;
+    top: 100%;
+    background: #00081E;
+    width: 120px;
+    border-radius: 5px;
+    top: 50px;
+    right: 0px;
+    z-index: 2;
+    padding: 12px 0 12px 15px;
+}
+.flexMenu-popup li {
+    text-align: left;
+    line-height: 24px;
+}
+.flexMenu-viewMore {
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+}
+.flexMenu-viewMore > a {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 46px;
+    text-align: left;
+    border: 2px solid #00ACBB;
+    border-bottom: 2px solid #00ACBB !important;
+    height: 38px;
+    border-radius: 5px;
+    background: url(../img/hidden-menu-icon.png) no-repeat 50%;
+    text-indent: -999px !important;
+    display: inline-block;
+}
+
+
+/* fleets wrap
+------------------------------------------------------------------------------------ */
+.fleets_wrap {
+    position: absolute;
+    right: 20px;
+    top: 100%;
+    background: rgba(0,19,45,.4);
+    padding-left: 18px;
+    padding-right: 13px;
+    border-radius: 0 0 10px 10px;
+}
+.fleets_wrap span {
+    float: left;
+    font-size: 12px;
+    line-height: 34px;
+    color: white;
+    margin: 0 1px;
+}
+.fleets_wrap span a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    padding: 11px 6px;
+    line-height: 12px;
+}
+.fleets_wrap span a:hover {
+    background: rgba(0,0,0,.5);
+    border-radius: 6px 0 6px 0;
+}
+.fleets_wrap span.all a {
+    color: white;
+}
+.fleets_wrap span.my a {
+    color: #80cbf2;
+}
+.fleets_wrap span.allies a {
+    color: #dcd79f;
+}
+.fleets_wrap span.enemies a {
+    color: #c76d7e;
+}
+
+
+
+/* Chat wrap
+------------------------------------------------------------------------------------ */
+
+.chat_wrap {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+}
+.chat_wrap .chat_btn {
+    display: block;
+    width: 43px;
+    border: 2px solid #00ACBB;
+    border-radius: 5px;
+    height: 29px;
+    background: url(../img/hidden-chat-icon.png) no-repeat 50%, #00081E;
+}
+
+.chat_wrap .section {
+    background: #00081E;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 430px;
+    height: 214px;
+    border: 2px solid #00B8C5;
+    border-radius: 5px;
+}
+.chat_wrap .section:after {
+    content: '';
+    border: 6px solid transparent;
+    border-right-width: 14px; 
+    border-left-width: 0px;
+    border-top: 6px solid #00B8C5;
+    position: absolute;
+    top: 100%;
+    right: 15px;
+}
+.chat_wrap ul.tabss {
+    height: 37px;
+    list-style: none;
+    background: #005264;
+    padding: 0 15px;
+}
+.chat_wrap .tabss li {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-right: 2px;
+    float: left;
+    display: inline-block;
+    padding: 3px 6px 5px;
+    cursor: pointer;
+    color: white;
+}
+.chat_wrap .tabss li.current {
+    background: #000000;
+    border-radius: 4px;
+}
+.chat_wrap .box {
+    display: none;
+    padding: 2px 15px 15px 12px;
+}
+.chat_wrap .visible {
+    display: block;
+}
+.chat_wrap .box p {
+    line-height: 19px;
+    font-size: 12px;
+    color: white;
+}
+.chat_wrap .close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+.chat_wrap .box a {
+    color: #14abb9;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid;
+    line-height: 12px;
+}
+.chat_wrap .box p .name {
+    color: #14abb9;
+    margin-top: 5px;
+    line-height: 14px;
+    display: inline-block;
+}
+.chat_wrap .box .img {
+    float: left;
+    margin-top: 10px;
+}
+.chat_wrap .box b {
+    font-family: 'DINPro Bold';
+}
+.chat_wrap .box .text {
+    padding-top: 5px;
+    float: right;
+    width: 325px;
+}
+
+.planet_popup_mob {
+    max-height: 300px;
+}
+.planet_popup_mob .planet_popup_inside {
+    max-height: 300px;
+}
+
+@media screen and (max-width: 1200px) {
+    .flexMenu-popup {
+        padding-left: 25px;
+        padding-bottom: 15px;
+        width: 360px;
+    }
+    .flexMenu-popup li {
+        float: left;
+        width: 110px;
+    }
+}
+
+
+
+
+
+/* media queries
+----------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 1030px), screen and (max-height: 645px) {
+    .planet-change {
+        width: 94px;
+        height: 89px;
+        background: url(../img/planet_info_small.png) no-repeat;
+    }
+
+    .planet-change .planet-info {
+        visibility: hidden;
+    }
+
+    .planet_popup {
+        width: 80px;
+        background: url(../img/popup-menu-small.png) no-repeat;
+        padding: 30px 10px 25px 15px;
+    }
+
+    .sidebar_menu_planet_on {
+        margin-left: 83px;
+    }
+
+    .planet_popup .planet-change-button {
+        position: relative;
+        width: 50px;
+    }
+
+    .planet_popup .planet-change-button .planet-info {
+        position: absolute;
+    }
+
+    .planet_popup .planet-change-button .planet-info .planet-cordinat {
+        background: rgba(0,0,0,.6);
+        padding: 3px 0;
+        text-align: center;
+        font-size: 9px;
+        margin-top: 13px;
+        width: 57px;
+        margin-left: -1px;
+        color: #cef8ff;
+    }
+
+    .planet_popup .planet-change-button .planet-info .planet-cordinat span {
+        font-size: 10px;
+        color: #cef8ff;
+    }
+
+    .planet_popup .planet-change-button img {
+        margin-left: 9px;
+        margin-top: 10px;
+    }
+
+    .planet_popup .planet-change-button .planet-info .planet-name {
+        display: none;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-height: 645px) {
+  .planet_popup {
+        width: 80px;
+        background: url(../img/popup-menu-small_2.png) no-repeat;
+        padding: 30px 10px 25px 15px;
+        height: 460px;
+    }
+
+    .planet_popup .planet_popup_inside {
+        height: 400px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-height: 560px) {
+    .planet_popup {
+        width: 80px;
+        background: url(../img/popup-menu-small_3.png) no-repeat;
+        padding: 30px 10px 25px 15px;
+        height: 360px;
+    }
+
+    .planet_popup .planet_popup_inside {
+        height: 300px;
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (max-height: 460px) {
+    .planet_popup {
+        width: 80px;
+        background: url(../img/popup-menu-small_4.png) no-repeat;
+        padding: 30px 10px 25px 15px;
+        height: 260px;
+    }
+
+    .planet_popup .planet_popup_inside {
+        height: 200px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px) {
+    .top_panel .resourses .resourse {
+        background: none;
+        margin-left: 36px;
+        margin-right: 16px;
+        padding: 0px;
+    }
+
+    .top_panel .mail {
+        margin-left: 0px;
+    }
+
+    .planet-change {
+        margin-right: 13px;
+    }
+
+    .planet-change-button {
+        width: 60px;
+    }
+
+    .resourses {
+        padding-right: 50px;
+    }
+
+    .resourse p {
+        padding-top: 16px;
+    }
+
+    .resourse p:before {
+        content: none;
+    }
+
+    .resourse:nth-child(1) p:before {
+        content: none !important;
+    }
+
+    .flexMenu-viewMore > a {
+        border: 0px solid black;
+        border-bottom: 0px solid black !important;
+        margin-right: -20px;
+    }
+    .flexMenu-popup {
+        right: -10px;
+    }
+    .resourse p:after {
+        content: none;
+    }
+
+    .resourse.last-resourse-block p:after {
+        content: none !important;
+    }
+
+    .top_panel .resourses .resourse img {
+        left: -36px;
+    }
+
+    .planet_popup .jspPane {
+        width: 55px !important;
+    }
+}
+
+.sidebar_menu ul.do_not_show {
+	visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 620px), screen and (max-height: 625px) {
+    .btn_change_planet {
+        width: 30px;
+        height: 30px;
+        /*background: red;*/
+        position: absolute;
+        top: 60px;
+        left: 150px;
+        cursor: pointer;
+    }
+    .planet_popup_mob {
+        width: 610px;
+        padding: 0;
+        margin-top: 18px;
+        overflow: visible;
+        border-radius: 15px;
+        left: 7px;
+        background: none;
+    }
+    .planet_popup_mob:before {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 18px;
+        top: -18px;
+        left: 9px;
+        background: url(../img/mobile_top.png) no-repeat;
+    }
+    .planet_popup_mob .planet_popup_inside {
+        padding-left: 1px !important; 
+        width: 100% !important;
+    }
+    .planet_popup_mob .jspPane {
+        width: 610px !important;
+        margin-left: 0 !important;
+    }
+    .planet_popup_mob .jspVerticalBar {
+        display: none;
+    }
+    .planet_popup_mob .planet-change-button {
+        float: left;
+        width: 65px;
+        height: 42px;
+    }
+    .planet_popup_mob .planet-info {
+        width: 100%;
+    }
+    .planet_popup_mob .planet-cordinat {
+        width: 100% !important;
+        text-align: center;
+    }
+    .planet_popup_mob .planet-change-button {
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+    .planet_popup_mob .planet-change-button img {
+        display: block;
+        margin-left: 17px;
+    }
+    .planet_popup_mob .jspHorizontalBar {
+        display: none;
+    }
+    .planet_popup_mob .jspContainer {
+        width: 100% !important;
+    }
+    .planet_popup_mob .planet_full_left_top {
+        background: url(../img/full_width_planet/left_top_bg.png) no-repeat;
+    }
+    .planet_popup_mob .planet_full_top {
+        background: url(../img/full_width_planet/top_bg.png) repeat-x;
+        border-radius: 15px 15px 0 0;
+    }
+    .planet_popup_mob .planet_full_right_top {
+        background: url(../img/full_width_planet/right_top_bg.png) right top no-repeat;
+    }
+    .planet_popup_mob .planet_full_right {
+        background: url(../img/full_width_planet/right_bg.png) right repeat-y;
+        border-radius: 25px;
+    }
+    .planet_popup_mob .planet_full_right_bot {
+        background: url(../img/full_width_planet/right_bot_bg.png) no-repeat right bottom;
+    }
+    .planet_popup_mob .planet_full_bot {
+        background: url(../img/full_width_planet/bot_bg.png) repeat-x bottom;
+        border-radius: 0 0 35px 35px;
+    }
+    .planet_popup_mob .planet_full_left_bot {
+        background: url(../img/full_width_planet/left_bot_bg.png) no-repeat bottom left;
+    }
+    .planet_popup_mob .planet_full_left {
+        background: url(../img/full_width_planet/left_bg.png) repeat-y left;
+        border-radius: 25px 0 0 25px;
+    }
+    .planet_popup_mob .planet_full_pdng {
+        padding: 12px 12px 15px 12px;
+    }
+    .planet_popup_mob .planet_full_bg {
+        background: rgba(0,12,28,.9);
+    }
+    .sidebar_menu {
+        display: block;
+        width: 383px;
+    }
+    .sidebar_menu ul {
+        border-radius: 10px;
+        padding: 15px 0;
+        width: 383px;
+        background: url(../img/sb_mobile_middle.png) repeat-y, rgba(0, 16, 28, .8);
+        margin-top: 83px;
+        margin-left: 13px;
+        visibility: hidden;
+    }
+    .sidebar_menu ul li {
+        width: 120px;
+        height: 70px;
+        display: inline-block;
+        text-align: center;
+    }
+    .sidebar_menu ul li a {
+        display: inline-block;
+        padding: 0;
+        padding-top: 25px;
+        margin: 0;
+        width: 95px;
+        position: relative;
+    }
+    .sidebar_menu ul li a:hover {
+        margin: 0;
+        width: 95px;
+        padding: 0;
+        padding-top: 25px;
+        left: 0;
+        background: url(../img/img_container_hover.png) no-repeat center -8px;
+    }
+    .sidebar_menu li a .img_container {
+        float: none;
+        position: absolute;
+        top: 8px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+    }
+    .sidebar_menu li a:hover .img_container {
+        margin-right: 0px;
+    }
+    .sidebar_menu ul li p {
+        float: none;
+    }
+    .sidebar_menu ul li a:hover p {
+        padding: 0;
+    }
+    .sidebar_menu ul:before {
+        content: '';
+        width: 100%;
+        height: 10px;
+        left: 0;
+        top: 0;
+        background: url(../img/sb_mobile.png) no-repeat;
+    }
+    .sidebar_menu ul:after {
+        content: '';
+        width: 100%;
+        height: 10px;
+        left: 0;
+        bottom: 0;
+        background: url(../img/sb_mobile.png) no-repeat;
+        background-position: bottom;
+    }
+    .show_sb {
+        z-index: 2;
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+        margin-top: 95px;
+        width: 63px;
+        height: 56px;
+        position: absolute;
+        background: url(../img/show-sb-icon.png) no-repeat;
+    }
+    .show_sb.open {
+        background-position: 0 -57px;
+    }
+    .show_sb.open:after {
+        content: '';
+        position: absolute;
+        right: -13px;
+        height: 0;
+        width: 0;
+        bottom: 5px;
+        border: 8px solid transparent;
+        border-bottom-width: 0;
+        border-left: 8px solid #00132F;
+    }
+    
+    .sidebar_menu_planet_on {
+        background: none !important;
+    }
+
+    .do_not_show {
+	visibility: hidden;
+	}
+	.sidebar_menu ul.do_not_show {
+		visibility: hidden;	
+	}
+
+	.sidebar_menu ul.open_bar {
+		visibility: visible;	
+	}
+
+	.sidebar_menu ul.open_bar.do_not_show {
+		visibility: hidden;	
+	}
+}
+@media screen and (min-width: 620px), and (min-height: 625px)  {
+    .sidebar_menu ul {
+        display: block !important;
+    }
+    
+}
+
+.open_bar {
+    visibility: visible;
+}
+
+#bla {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+
+
+
+
+
+

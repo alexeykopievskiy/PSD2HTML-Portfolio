@@ -1,0 +1,227 @@
+@media(min-width: 320px) and (max-width: 480px){
+	.b-login__container{
+		display: block;
+		margin: auto;
+		width: 300px;
+		background-color: #FDFEFE;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		overflow: hidden;
+	}
+}
+@media(min-width: 480px){
+	.b-login__container{
+		display: block;
+		margin: auto;
+		width: 420px;
+		background-color: #FDFEFE;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		overflow: hidden;
+	}
+}
+
+
+
+
+
+html,
+body{
+	height: 100%;
+}
+.b-login{
+	background-color: #003950;
+	display: flex;
+}
+
+.b-page__clear{
+	clear: both;
+}
+
+
+
+
+.b-container__color{
+	height: 15px;
+	width: 100%;
+}
+.b-color__blue,
+.b-color__aqua,
+.b-color__yellow,
+.b-color__pink{
+	width: 25%;
+	height: 15px;
+	float: left;
+}
+.b-color__blue{
+	background-color: #006A95;
+}
+.b-color__aqua{
+	background-color: #00C8CC;
+}
+.b-color__yellow{
+	background-color: #FFC56D;
+}
+.b-color__pink{
+	background-color: #FF6E94;
+}
+
+
+
+
+.b-container__input{
+	width: 220px;
+	margin: 50px auto;
+}
+.b-form__input{
+	width: 220px;
+	height: 35px;
+	border-radius: 5px;
+	background-color: #F4F5F7;
+	border: 1px solid #EDEEF1;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+.b-form__input::-webkit-input-placeholder,
+.b-form__input::-moz-placeholder,        
+.b-form__input:-moz-placeholder,          
+.b-form__input:-ms-input-placeholder{
+	font-family: "Microsoft Sans Serif";
+	color: #D2D2D2;
+	font-size: 14px;
+}    
+
+
+.b-form__enter{
+	float: left;
+	background-color: #00D375;
+	width: 105px;
+	height: 35px;
+	text-align: center;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 16px;
+	padding-top: 6px;
+	margin-top: 10px;
+}  
+.b-form__register{
+	float: right;
+	width: 105px;
+	height: 35px;
+	background-color: #FF6E7D;
+	text-align: center;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 16px;
+	padding-top: 6px;
+	margin-top: 10px;
+}
+
+
+
+.b-form__enter:hover,
+.b-form__enter:active,
+.b-form__enter:focus,
+.b-form__register:hover,
+.b-form__register:active,
+.b-form__register:focus,
+.b-form__reg a:active,
+.b-form__reg a:focus,
+.b-form__reg a:hover{
+	color: #FFF;
+}
+
+.b-form__reg a{
+	 width: 280px;
+    display: block;
+    height: 35px;
+	color: #FFF;
+}
+
+
+.b-form__forget{
+	color: #686D70;
+	text-align: center;
+	width: 100%;
+	display: block;
+	margin-top: 60px;
+	cursor: pointer;
+}
+
+
+.b-block-register{
+	display: none;
+	width: 280px;
+	margin: 20px auto;
+}
+.b-reg{
+	width: 280px;
+}
+.b-form__reg{
+	width: 100%;
+}
+
+
+
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    color: #BDBBBB;
+    font-size: 14px;
+}
+
+input[type="radio"] + label span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    background: url(../img/radio.png)no-repeat;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(../img/radio-active.png)no-repeat;
+}
+
+.b-radio__client{
+	float: left;
+	margin-bottom: 15px;
+}
+.b-radio__performer{
+	float: right;
+	margin-bottom: 15px;
+}
+.b-reg__margin{
+	margin: 0;
+}
+
+
+
+
+.b-block-forgot{
+	display: none;
+	width: 280px;
+}
+
+.b-form__forgot-btn{
+	background-color: #00D375;
+	width: 280px;
+	height: 35px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 6px;
+	font-size: 16px;
+}
+.b-form__forgot-btn a,
+.b-form__forgot-btn a:hover,
+.b-form__forgot-btn a:focus,
+.b-form__forgot-btn a:active{
+	color: #FFF;
+}

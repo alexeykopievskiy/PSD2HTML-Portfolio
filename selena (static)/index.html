@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><!-- Заголовок страницы --></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+        <meta name="viewport" content="width=1366">
+        <meta charset="utf-8">
+        <!-- мета-информация, которую генерирует WordPress (в т.ч. favicon) -->
+
+        <!-- место для ваших стилей -->
+        <link rel="stylesheet" type="text/css" href="vendor/slick.css"/>
+        <script type="text/javascript" src="vendor/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="vendor/slick.js"></script>
+    
+
+        <link rel="stylesheet" id="style-css"  href="style.css" type="text/css" />
+        <!-- стили и скрипты, которые загружает WordPress (в т.ч. jQuery) -->
+    </head>
+    <body>
+    <header class="header">
+        <div class="wrapper">
+                <div class="column-1 header-container">
+                    <div class="header-logo">
+                        <object type="image/svg+xml" data="images/logo.svg" class="logo" width="60"></object>
+                    </div>
+                </div>
+                <div class="column-2 header-nav">
+                    <ul class="nav-header">
+                        <li class="nav-header-item"><a href="#">Salon</a></li>
+                        <li class="nav-header-item"><a href="#">Art</a></li>
+                        <li class="nav-header-item"><a href="#">About</a></li>
+                        <li class="nav-header-item"><a href="#">Contact</a></li>
+                        <li class="nav-header-item"><a href="#">Eng</a></li>
+                    </ul>
+                    <span class="header-nav-search"></span>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+        </div>
+    </header>
+    
+
+    <section class="content">
+        <div class="wrapper">
+            <div class="black-quadro"></div>
+            <div class="top-bar">
+                <div class="bar-layers">
+                    <div class="black-bar"></div>
+                    <div class="yellow-bar"></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="bar-header">
+                    <span class="bar text">Салонъ</span>
+                    <span class="bar-logo">
+                        <object type="image/svg+xml" data="images/selena-rus.svg" class="logo" width="450"></object>
+                    </span>
+                    <span class="bar-text">Арт</span>
+                </div>
+
+            </div>
+            <div class="main-content">
+                <h2 class="events">Events:</h2>
+                <div class="article-content">
+                    <div class="article-container">
+                        <div class="events-nav">
+                            <ul>
+                                <li><a href="#">Past</a></li>
+                                <li class="active"><a href="#">Current</a></li>
+                                <li><a href="#">Soon</a></li>
+                            </ul>
+                        </div>
+                        <div class="article-block">
+                            <div class="article-item">
+                                <div class="item-img">
+                                    <img src="images/item1.jpg" alt="">
+                                </div>
+                                <div class="item-content">
+                                    <p class="item-post">Art Fair</p>
+                                    <h3 class="item-name">SPB ART</h3>
+                                    <p class="item-date">Thu, 12th Nov - Sat, 21th Nov</p>
+                                    <p class="item-description">
+                                        LECTURE:<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                                    </p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- если требуется сверстать блок во всю ширину (например слайдер), рекомендуется использовать структуру выше, указав соответствующий класс <section class="hero"> и стиль section.hero > .wrapper { width: 100% } -->
+
+    <footer class="footer">
+        <div class="wrapper clearfix">
+                <div class="column-1 footer-logo">
+                    <div class="footer-logo-container">
+                        <object type="image/svg+xml" data="images/footer-logo.svg" class="logo" width="180"></object>
+                    </div>
+                </div>
+                <div class="column-2 footer-rights">
+                    <div class="footer-rights-container">
+                        <p class="right-content">COPYWRITE SELENA 2015</p>
+                        <ul>
+                            <li><a href="#">
+                                <object type="image/svg+xml" data="images/fb.svg" class="logo" width="50"></object>
+                            </a></li>
+                            <li><a href="#">
+                                <object type="image/svg+xml" data="images/vk.svg" class="logo" width="50"></object>
+                            </a></li>
+                            <li><a href="#">
+                                <object type="image/svg+xml" data="images/in.svg" class="logo" width="55"></object>
+                            </a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+        </div>
+    </footer>
+    <!-- если требуется добавить еще одну секцию подвала, то необходимо продублировать структуру выше, указав соответствующий класс <footer class="second_footer"> -->
+
+    <!-- тут ваши js-скрипты -->
+    <script type="text/javascript" src="vendor/script.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+    <script type="text/javascript">
+            /*$('.article-block').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 10
+});*/
+    
+    </script>
+    
+    <!-- скрипты, которые загружачет WordPress <?php wp_footer(); ?> -->
+    </body>
+</html>

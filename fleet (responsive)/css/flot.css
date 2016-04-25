@@ -1,0 +1,3215 @@
+* {
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: url(../img/bg.jpg) no-repeat, black;
+    background-position: -300px 50%;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'DINPro Regular';
+}
+
+.main-wrap {
+    width: 100%;
+    height: 100%;
+    min-width: 635px;
+    min-height: 395px;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+p, a, ul, li, input, label, button, textarea {
+    margin: 0;
+    padding: 0;
+}
+a img {
+    border: none;
+}
+ul {
+    list-style: none;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.wrap {
+    margin: auto;
+    width: 960px;
+}
+
+/* Header
+------------------------------------------------------------------------------------ */
+
+p {
+    color: white;
+}
+
+/* Top-panel
+------------------------------------------------------------------------------------ */
+.top_panel {
+    width: 100%;
+    height: 62px;
+    background: url(../img/top_bg.png) repeat-x;
+    position: absolute;
+    z-index: 5;
+}
+.planet-change {
+    position: relative;
+    float: left;
+    width: 204px;
+    height: 89px;
+    background: url(../img/planet_info.png);
+    margin-right: 30px;
+    margin-left: 3px;
+    padding-left: 18px;
+    padding-top: 16px;
+    top: -10px;
+}
+.planet-change-button {
+    width: 170px;
+    height: 57px;
+    display: block;
+}
+.planet-change-button img, .planet-change-button > * {
+    float: left;
+}
+.planet-info {
+    margin-top: 11px;
+}
+.planet-info .planet-name {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.planet-info .planet-cordinat {
+    color: #447293;
+    font-size: 12px;
+}
+.planet-change-button img {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 12px;
+}
+.planet_popup {
+    visibility: hidden;
+    z-index: -1;
+    height: 526px;
+    overflow: hidden;
+}
+.planet_popup.planet_on {
+    visibility: visible;
+}
+.planet_popup {
+    position: absolute;
+    top: 75px;
+    padding: 30px 10px 25px 20px;
+    left: 7px;
+    width: 196px;
+    height: 546px;
+    overflow: hidden;
+    background: url(../img/popup-menu.png) no-repeat;
+}
+.planet_popup_inside {
+    top: 30px;
+    width: 166px;
+    height: 500px;
+    outline: none;
+}
+.planet_popup .planet-change-button {
+    height: 46px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+.planet_popup .planet-change-button:last-child {
+    margin-bottom: 0;
+}
+.planet_popup .planet-change-button img {
+    margin-top: 4px;
+    margin-left: 12px;
+}
+.planet_popup .planet-change-button .planet-info {
+    margin-top: 2px;
+}
+.planet_popup .planet-change-button .planet-info span {
+    color: #638E99;
+}
+.resourses {
+    padding-top: 5px;
+    padding-right: 105px;
+}
+.resourse p {
+    font-size: 14px;
+}
+.resourse .resourse-tip {
+    height: 63px;
+    position: absolute;
+    padding: 10px 10px 5px 10px;
+    background: #000000;
+    margin-top: 45px;
+    border-radius: 3px;
+    margin-left: -70px;
+    z-index: 999;
+}
+.resourse-tip {
+    box-sizing: content-box;
+    visibility: hidden;
+}
+.resourse:hover .resourse-tip {
+    visibility: visible;
+}
+.resourse-tip table tr td:nth-child(1) {
+    text-align: left;
+    color: #7a8788;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    line-height: 17px;
+}
+.resourse-tip table tr {
+    height: 17px !important;
+}
+.resourse-tip table tr td {
+    height: 17px !important;
+}
+.resourse-tip table tr td:nth-child(2) {
+    white-space: nowrap;
+    color: #ffffff;
+    line-height: 17px;
+    padding: 0 0 0 20px;
+    margin: 0;
+    text-align: right;
+    font-size: 12px;
+}
+
+.top_panel .resourses .resourse {
+    height: 52px;
+    padding: 0 10px;
+    float: left;
+    color: #ffffff;
+    position: relative;
+}
+
+.top_panel .resourses .resourse img {
+    position: absolute;
+    top: 1px;
+    left: -48px;
+}
+
+.resourse {
+    border: 0 !important;
+    height: 52px;
+    background: url(../img/resource_bg-center-ie.png) repeat-x;
+    margin-right: 88px;
+}
+
+.last-resourse-block {
+    margin-right: 14px;
+}
+
+.resourse:nth-child(1) {
+    margin-left: 57px;
+}
+
+.resourse p {
+    padding-top: 12px;
+    position: relative;
+}
+
+.resourse img {
+    z-index: 1000;
+    margin-top: 12px;
+    margin-left: 3px;
+}
+
+.resourse p:before {
+    position: absolute;
+    margin-left: -80px;
+    margin-top: -12px;
+    content: url(../img/resource_bg_left_ie.png);
+}
+
+.resourse p:after {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -12px;
+    content: url(../img/resource_bg_right_ie.png);
+}
+
+.resourse.last-resourse-block p:after {
+    content: url(../img/resource_bg_right_ie_last.png);
+}
+
+.resourse:nth-child(1) p:before {
+    position: absolute;
+    margin-left: -80px;
+    margin-top: -12px;
+    content: url(../img/resource_bg_left_ie_first.png) !important;
+}
+
+.resourse .resourse-tip {
+    margin-top: 57px;
+}
+
+
+
+/* Sidebar menu
+------------------------------------------------------------------------------------ */
+.sidebar_menu {
+    float: left;
+    width: 270px;
+    margin-top: 62px;
+    margin-left: 7px;
+    position: relative;
+}
+.sidebar_menu ul {
+    background: rgba(0, 16, 28, .8);
+}
+.sidebar_menu li {
+    width: 100%;
+    height: 46px;
+}
+.sidebar_menu li a {
+    position: absolute;
+    width: 232px;
+    height: 46px;
+    padding-left: 25px;
+    padding-right: 12px;
+    line-height: 46px;
+    text-decoration: none;
+}
+.sidebar_menu li a p {
+    float: left;
+    font-size: 14px;
+    color: white;
+}
+.sidebar_menu li a .img_container {
+    width: 35px;
+    float: right;
+    text-align: center;
+    padding-top: 9px;
+    line-height: 30px;
+}
+.sidebar_menu li a .img_container img {
+    display: inline-block;
+}
+.sidebar_menu li a .img_container img.hover_img {
+    display: none;
+}
+.sidebar_menu li a:hover {
+    padding-left: 25px;
+    padding-right: 27px;
+    left: -25px;
+    background: url(../img/sidebar_item_bg.png) no-repeat;
+    width: 253px;
+}
+.sidebar_menu li a:hover p {
+    color: #70dae3;
+}
+.sidebar_menu li a:hover img.hover_img {
+    display: inline-block;
+}
+.sidebar_menu li a:hover img.standart_img {
+    display: none;
+}
+
+.sidebar_menu li a:hover .img_container {
+    margin-right: -6px;
+}
+
+.sidebar_menu li a:hover p {
+    padding-left: 12px;
+}
+
+/* fix */
+
+.sidebar_menu ul {
+    margin-top: 30px;
+    background-color: none;
+    background: url(../img/sidebar_menu_bg_mid_ie.png) repeat-y;
+    position: relative;
+}
+.sidebar_menu ul:after {
+    position: absolute;
+    bottom: -10px;
+    content: url(../img/sidebar_menu_bg_bot_ie.png);
+}
+.sidebar_menu ul:before {
+    position: absolute;
+    content: url(../img/sidebar_menu_bg_top_ie.png);
+    top: -30px;
+}
+.sidebar_menu ul a {
+    margin-left: 20px;
+}
+.sidebar_menu ul a:hover {
+    margin-left: 33px;
+}
+
+/* Advanced menu
+------------------------------
+*/
+
+.sidebar_menu_planet_on {
+    width: 87px;
+    margin-left: 195px;
+    border-left: 0px solid red;
+    background: url(../img/small-popup-bg.png) repeat-y;
+}
+.sidebar_menu_planet_on ul {
+    width: 69px;
+    background: none;
+}
+
+.sidebar_menu.sidebar_menu_planet_on ul:before {
+    content: url(../img/mini.png) !important;
+}
+.sidebar_menu.sidebar_menu_planet_on ul:after {
+    content: url(../img/mini2.png) !important;
+}
+
+.sidebar_menu_planet_on ul li a {
+    width: 63px;
+    margin-left: 0px;
+    padding-left: 17px;
+}
+.sidebar_menu_planet_on ul li a p {
+    display: none;
+}
+
+.sidebar_menu_planet_on li a:hover .img_container {
+    margin-left: -30px;
+}
+
+.sidebar_menu_planet_on li a:hover {
+    width: 63px;
+    background: url(../img/item-small.png) no-repeat;
+    z-index: 999;
+    left: 5px;
+    margin-left: 0px;
+}
+
+.sidebar_menu_planet_on li a .img_container {
+    float: left;
+}
+.sidebar_menu_planet_on li a:hover .img_container {
+    float: right;
+    margin-right: -11px;
+}
+
+
+
+/* fleets wrap
+------------------------------------------------------------------------------------ */
+.top_panel .mail {
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 20px;
+    float: left;
+    background: url(../img/mail.png) no-repeat;
+    margin-left: 28px;
+    margin-top: 15px;
+}
+.top_panel .mail p {
+    display: none;
+}
+.top_panel .have_message,
+.top_panel .mail:hover {
+    background-position: 0 -21px;
+}
+
+.top_panel .have_message p {
+    position: absolute;
+    left: 100%;
+    top: -4px;
+    margin-left: -8px;
+    display: inline-block;
+    border-radius: 10px;
+    background: #BE8000;
+    font-size: 9px;
+    line-height: 14px;
+    color: #fff;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-family: 'DINPro-Regular';
+}
+
+/* Flex menu
+------------------------------------------------------------------------------------ */
+.top_panel .menu {
+  list-style: none;
+  height: 60px;
+  overflow: hidden;
+  text-align: right;
+}
+.top_panel .menu a {
+    font-size: 14px;
+    color: white;
+    font-family: 'DINPro Regular';
+    text-decoration: none;
+    border-bottom: 1px solid #264152;
+    line-height: 16px;
+    display: inline-block;
+}
+.top_panel .menu > li {
+  display: inline-block;
+  line-height: 50px;
+  margin-left: 20px;
+}
+.top_panel .menu > li:last-child {
+    margin-left: 0;
+}
+.top_panel .menu > li:first-child {
+    margin-left: 0;
+}
+.flexMenu-popup {
+    border: 2px solid #00ACBB;
+    position: relative;
+    top: 100%;
+    background: #00081E;
+    width: 120px;
+    border-radius: 5px;
+    top: 50px;
+    right: 0px;
+    z-index: 2;
+    padding: 12px 0 12px 15px;
+}
+.flexMenu-popup li {
+    text-align: left;
+    line-height: 24px;
+}
+.flexMenu-viewMore {
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+}
+.flexMenu-viewMore > a {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 46px;
+    text-align: left;
+    border: 2px solid #00ACBB;
+    border-bottom: 2px solid #00ACBB !important;
+    height: 38px;
+    border-radius: 5px;
+    background: url(../img/hidden-menu-icon.png) no-repeat 50%;
+    text-indent: -999px !important;
+    display: inline-block;
+}
+
+
+/* fleets wrap
+------------------------------------------------------------------------------------ */
+.fleets_wrap {
+    position: absolute;
+    right: 20px;
+    top: 100%;
+    background: rgba(0,19,45,.4);
+    padding-left: 18px;
+    padding-right: 13px;
+    border-radius: 0 0 10px 10px;
+}
+.fleets_wrap span {
+    float: left;
+    font-size: 12px;
+    line-height: 34px;
+    color: white;
+    margin: 0 1px;
+}
+.fleets_wrap span a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 6px;
+    line-height: 12px;
+}
+.fleets_wrap span a:hover {
+    background: rgba(0,0,0,.5);
+    border-radius: 6px 0 6px 0;
+}
+.fleets_wrap span.all a {
+    color: white;
+}
+.fleets_wrap span.my a {
+    color: #80cbf2;
+}
+.fleets_wrap span.allies a {
+    color: #dcd79f;
+}
+.fleets_wrap span.enemies a {
+    color: #c76d7e;
+}
+
+
+
+/* Chat wrap
+------------------------------------------------------------------------------------ */
+
+.chat_wrap {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+}
+.chat_wrap .chat_btn {
+    display: block;
+    width: 43px;
+    border: 2px solid #00ACBB;
+    border-radius: 5px;
+    height: 29px;
+    background: url(../img/hidden-chat-icon.png) no-repeat 50%, #00081E;
+}
+
+.chat_wrap .section {
+    background: #00081E;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 430px;
+    height: 214px;
+    border: 2px solid #00B8C5;
+    border-radius: 5px;
+}
+.chat_wrap .section:after {
+    content: '';
+    border: 6px solid transparent;
+    border-right-width: 14px; 
+    border-left-width: 0px;
+    border-top: 6px solid #00B8C5;
+    position: absolute;
+    top: 100%;
+    right: 15px;
+}
+.chat_wrap ul.tabs {
+    height: 37px;
+    list-style: none;
+    background: #005264;
+    padding: 0 15px;
+}
+.chat_wrap .tabs li {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-right: 2px;
+    float: left;
+    display: inline-block;
+    padding: 3px 6px 5px;
+    cursor: pointer;
+    color: white;
+}
+.chat_wrap .tabs li.current {
+    background: #000000;
+    border-radius: 4px;
+}
+.chat_wrap .box {
+    display: none;
+    padding: 2px 15px 15px 12px;
+}
+.chat_wrap .visible {
+    display: block;
+}
+.chat_wrap .box p {
+    line-height: 19px;
+    font-size: 12px;
+    color: white;
+}
+.chat_wrap .close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+.chat_wrap .box a {
+    color: #14abb9;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid;
+    line-height: 12px;
+}
+.chat_wrap .box p .name {
+    color: #14abb9;
+    margin-top: 5px;
+    line-height: 14px;
+    display: inline-block;
+}
+.chat_wrap .box .img {
+    float: left;
+    margin-top: 10px;
+}
+.chat_wrap .box b {
+    font-family: 'DINPro Bold';
+}
+.chat_wrap .box .text {
+    padding-top: 5px;
+    float: right;
+    width: 325px;
+}
+
+.planet_popup_mob {
+    max-height: 300px;
+}
+.planet_popup_mob .planet_popup_inside {
+    max-height: 300px;
+}
+
+@media screen and (max-width: 1200px) {
+    .flexMenu-popup {
+        padding-left: 25px;
+        padding-bottom: 15px;
+        width: 360px;
+    }
+    .flexMenu-popup li {
+        float: left;
+        width: 110px;
+    }
+}
+
+
+
+
+
+/* media queries
+----------------------------------------------------------------------
+*/
+
+@media screen and (max-width: 1030px), screen and (max-height: 645px) {
+    .planet-change {
+        width: 94px;
+        height: 89px;
+        background: url(../img/planet_info_small.png) no-repeat;
+    }
+
+    .planet-change .planet-info {
+        visibility: hidden;
+    }
+
+    .planet_popup {
+        width: 80px;
+        background: url(../img/popup-menu-small.png) no-repeat;
+        padding: 30px 10px 25px 15px;
+    }
+
+    .sidebar_menu_planet_on {
+        margin-left: 83px;
+    }
+
+    .planet_popup .planet-change-button {
+        position: relative;
+        width: 50px;
+    }
+
+    .planet_popup .planet-change-button .planet-info {
+        position: absolute;
+    }
+
+    .planet_popup .planet-change-button .planet-info .planet-cordinat {
+        background: rgba(0,0,0,.6);
+        padding: 3px 0;
+        text-align: center;
+        font-size: 9px;
+        margin-top: 13px;
+        width: 57px;
+        margin-left: -1px;
+        color: #cef8ff;
+    }
+
+    .planet_popup .planet-change-button .planet-info .planet-cordinat span {
+        font-size: 10px;
+        color: #cef8ff;
+    }
+
+    .planet_popup .planet-change-button img {
+        margin-left: 9px;
+        margin-top: 10px;
+    }
+
+    .planet_popup .planet-change-button .planet-info .planet-name {
+        display: none;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-height: 645px) {
+  .planet_popup {
+        width: 80px;
+        background: url(../img/popup-menu-small_2.png) no-repeat;
+        padding: 30px 10px 25px 15px;
+        height: 460px;
+    }
+
+    .planet_popup .planet_popup_inside {
+        height: 400px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-height: 560px) {
+    .planet_popup {
+        width: 80px;
+        background: url(../img/popup-menu-small_3.png) no-repeat;
+        padding: 30px 10px 25px 15px;
+        height: 360px;
+    }
+
+    .planet_popup .planet_popup_inside {
+        height: 300px;
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (max-height: 460px) {
+    .planet_popup {
+        width: 80px;
+        background: url(../img/popup-menu-small_4.png) no-repeat;
+        padding: 30px 10px 25px 15px;
+        height: 260px;
+    }
+
+    .planet_popup .planet_popup_inside {
+        height: 200px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px) {
+    .top_panel .resourses .resourse {
+        background: none;
+        margin-left: 36px;
+        margin-right: 16px;
+        padding: 0px;
+    }
+
+    .top_panel .mail {
+        margin-left: 0px;
+    }
+
+    .planet-change {
+        margin-right: 13px;
+    }
+
+    .planet-change-button {
+        width: 60px;
+    }
+
+    .resourses {
+        padding-right: 50px;
+    }
+
+    .resourse p {
+        padding-top: 16px;
+    }
+
+    .resourse p:before {
+        content: none;
+    }
+
+    .resourse:nth-child(1) p:before {
+        content: none !important;
+    }
+
+    .flexMenu-viewMore > a {
+        border: 0px solid black;
+        border-bottom: 0px solid black !important;
+        margin-right: -20px;
+    }
+    .flexMenu-popup {
+        right: -10px;
+    }
+    .resourse p:after {
+        content: none;
+    }
+
+    .resourse.last-resourse-block p:after {
+        content: none !important;
+    }
+
+    .top_panel .resourses .resourse img {
+        left: -36px;
+    }
+
+    .planet_popup .jspPane {
+        width: 55px !important;
+    }
+}
+
+.sidebar_menu ul.do_not_show {
+	visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 620px), screen and (max-height: 625px) {
+    .btn_change_planet {
+        width: 30px;
+        height: 30px;
+        /*background: red;*/
+        position: absolute;
+        top: 60px;
+        left: 150px;
+        cursor: pointer;
+    }
+    .planet_popup_mob {
+        width: 610px;
+        padding: 0;
+        margin-top: 18px;
+        overflow: visible;
+        border-radius: 15px;
+        left: 7px;
+        background: none;
+    }
+    .planet_popup_mob:before {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 18px;
+        top: -18px;
+        left: 9px;
+        background: url(../img/mobile_top.png) no-repeat;
+    }
+    .planet_popup_mob .planet_popup_inside {
+        padding-left: 1px !important; 
+        width: 100% !important;
+    }
+    .planet_popup_mob .jspPane {
+        width: 610px !important;
+        margin-left: 0 !important;
+    }
+    .planet_popup_mob .jspVerticalBar {
+        display: none;
+    }
+    .planet_popup_mob .planet-change-button {
+        float: left;
+        width: 65px;
+        height: 42px;
+    }
+    .planet_popup_mob .planet-info {
+        width: 100%;
+    }
+    .planet_popup_mob .planet-cordinat {
+        width: 100% !important;
+        text-align: center;
+    }
+    .planet_popup_mob .planet-change-button {
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+    .planet_popup_mob .planet-change-button img {
+        display: block;
+        margin-left: 17px;
+    }
+    .planet_popup_mob .jspHorizontalBar {
+        display: none;
+    }
+    .planet_popup_mob .jspContainer {
+        width: 100% !important;
+    }
+    .planet_popup_mob .planet_full_left_top {
+        background: url(../img/full_width_planet/left_top_bg.png) no-repeat;
+    }
+    .planet_popup_mob .planet_full_top {
+        background: url(../img/full_width_planet/top_bg.png) repeat-x;
+        border-radius: 15px 15px 0 0;
+    }
+    .planet_popup_mob .planet_full_right_top {
+        background: url(../img/full_width_planet/right_top_bg.png) right top no-repeat;
+    }
+    .planet_popup_mob .planet_full_right {
+        background: url(../img/full_width_planet/right_bg.png) right repeat-y;
+        border-radius: 25px;
+    }
+    .planet_popup_mob .planet_full_right_bot {
+        background: url(../img/full_width_planet/right_bot_bg.png) no-repeat right bottom;
+    }
+    .planet_popup_mob .planet_full_bot {
+        background: url(../img/full_width_planet/bot_bg.png) repeat-x bottom;
+        border-radius: 0 0 35px 35px;
+    }
+    .planet_popup_mob .planet_full_left_bot {
+        background: url(../img/full_width_planet/left_bot_bg.png) no-repeat bottom left;
+    }
+    .planet_popup_mob .planet_full_left {
+        background: url(../img/full_width_planet/left_bg.png) repeat-y left;
+        border-radius: 25px 0 0 25px;
+    }
+    .planet_popup_mob .planet_full_pdng {
+        padding: 12px 12px 15px 12px;
+    }
+    .planet_popup_mob .planet_full_bg {
+        background: rgba(0,12,28,.9);
+    }
+    .sidebar_menu {
+        display: block;
+        width: 383px;
+		z-index: 999;
+    }
+    .sidebar_menu ul {
+        border-radius: 10px;
+        padding: 15px 0;
+        width: 383px;
+        background: url(../img/sb_mobile_middle.png) repeat-y, rgba(0, 16, 28, .8);
+        margin-top: 83px;
+        margin-left: 13px;
+        visibility: hidden;
+    }
+    .sidebar_menu ul li {
+        width: 120px;
+        height: 70px;
+        display: inline-block;
+        text-align: center;
+    }
+    .sidebar_menu ul li a {
+        display: inline-block;
+        padding: 0;
+        padding-top: 25px;
+        margin: 0;
+        width: 95px;
+        position: relative;
+    }
+    .sidebar_menu ul li a:hover {
+        margin: 0;
+        width: 95px;
+        padding: 0;
+        padding-top: 25px;
+        left: 0;
+        background: url(../img/img_container_hover.png) no-repeat center -8px;
+    }
+    .sidebar_menu li a .img_container {
+        float: none;
+        position: absolute;
+        top: 8px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+    }
+    .sidebar_menu li a:hover .img_container {
+        margin-right: 0px;
+    }
+    .sidebar_menu ul li p {
+        float: none;
+    }
+    .sidebar_menu ul li a:hover p {
+        padding: 0;
+    }
+    .sidebar_menu ul:before {
+        content: '';
+        width: 100%;
+        height: 10px;
+        left: 0;
+        top: 0;
+        background: url(../img/sb_mobile.png) no-repeat;
+    }
+    .sidebar_menu ul:after {
+        content: '';
+        width: 100%;
+        height: 10px;
+        left: 0;
+        bottom: 0;
+        background: url(../img/sb_mobile.png) no-repeat;
+        background-position: bottom;
+    }
+    .show_sb {
+        z-index: 2;
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+        margin-top: 95px;
+        width: 63px;
+        height: 56px;
+        position: absolute;
+        background: url(../img/show-sb-icon.png) no-repeat;
+    }
+    .show_sb.open {
+        background-position: 0 -57px;
+    }
+    .show_sb.open:after {
+        content: '';
+        position: absolute;
+        right: -13px;
+        height: 0;
+        width: 0;
+        bottom: 5px;
+        border: 8px solid transparent;
+        border-bottom-width: 0;
+        border-left: 8px solid #00132F;
+    }
+    
+    .sidebar_menu_planet_on {
+        background: none !important;
+    }
+
+    .do_not_show {
+	visibility: hidden;
+	}
+	.sidebar_menu ul.do_not_show {
+		visibility: hidden;	
+	}
+
+	.sidebar_menu ul.open_bar {
+		visibility: visible;	
+	}
+
+	.sidebar_menu ul.open_bar.do_not_show {
+		visibility: hidden;	
+	}
+}
+@media screen and (min-width: 620px), and (min-height: 625px)  {
+    .sidebar_menu ul {
+        display: block !important;
+    }
+    
+}
+
+.open_bar {
+    visibility: visible;
+}
+
+#bla {
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 200px;
+}
+
+.fleet {
+display:none;
+position: absolute;
+left: 0px;
+top: 100px;
+margin-left: 24%;
+width: 797px;
+margin-right: 10%;
+/* background: rgba(250,250,250, 0.6); */
+height: auto;
+min-height: 400px;
+font-size: 12pt;
+color: #FFF;
+font-family: "DINPro Regular";
+}
+
+.fleet-fly {
+width: 797px;
+min-height: 200px;
+margin-bottom: 20px;
+}
+
+.shipyard {
+display:none;
+position: absolute;
+left: 0px;
+top: 100px;
+margin-left: 20%;
+width: 840px;
+margin-right: 10%;
+/* background: rgba(250,250,250, 0.6); */
+height: auto;
+min-height: 400px;
+font-size: 11pt;
+color: #FFF;
+font-family: "DINPro Regular";
+}
+
+
+.shipyard-title {
+font-size: 12pt;
+color: #FFF;
+font-weight: bold;
+padding: 12px 10px;
+line-height: 24px;
+display:inline-block;
+}
+
+.fleet-title {
+font-size: 12pt;
+color: #FFF;
+padding: 12px 20px;
+line-height: 24px;
+display:inline-block;
+}
+
+.fleet-title-res {
+display: inline-block;
+padding-left: 150px;
+}
+
+.fleet-volume {
+background: url(../img/fleet/fleet-progress.png) no-repeat center bottom;
+display: inline-block;
+text-align: right;
+float: right;
+font-size: 11pt;
+letter-spacing:  -0.7px;
+height: 40px;
+}
+
+strong {
+font-weight: bold;
+}
+
+.fleet-button {
+cursor: pointer;
+color: #000;
+font-size: 11pt;
+font-weight: bold;
+display: inline-block;
+vertical-align: middle;
+margin: 0px 5px;
+}
+
+.fleet-button-small {
+background: #14abb9;
+height: 21px;
+text-align:center;
+float: left;
+vertical-align: middle;
+line-height: 18px;
+}
+
+.fleet-select {
+float: right;
+display: inline-block;
+margin-top: 15px;
+margin-right: 5px;
+line-height: 21px;
+}
+
+.fleet-select-link {
+color: #fff;
+font-size: 10pt;
+font-weight: bold;
+text-decoration: none;
+border-bottom: 1px #fff dashed;
+}
+.switcher{
+    cursor: pointer;
+}
+
+.fleet-select-link.active {
+color: #6f878d;
+font-size: 10pt;
+font-weight: bold;
+text-decoration: none;
+border-bottom: 0px #fff dashed;
+}
+.decoration{
+    border: none!important;
+}
+
+.fleet-button-left {
+background: url(../img/fleet/fleet-button-small.png) no-repeat left center;
+height: 21px;
+display: inline-block;
+width: 10px;
+float: left;
+line-height: 14px;
+}
+
+.fleet-button-right {
+background: url(../img/fleet/fleet-button-small.png) no-repeat right center;
+height: 21px;
+display: inline-block;
+width: 10px;
+float: left;
+line-height: 14px;
+}
+
+.fleet-element {
+width: 100px;
+height: 100px;
+margin: 5px 5px;
+float: left;
+}
+
+
+
+.fleet-buy {
+color: #fff;
+max-width: 160px;
+margin-left: -5px;
+font-size: 12pt;
+font-weight: bold;
+display: inline-block;
+vertical-align: middle;
+position: absolute;
+margin-top: -66px;
+height: 24px;
+z-index: 1;
+}
+
+.fleet-buy-small {
+color: #fff;
+font-size: 12pt;
+font-weight: bold;
+vertical-align: middle;
+height: 24px;
+z-index: 1;
+margin: 30px auto;
+width: 80px;
+}
+
+.fleet-buy-number{
+background: url(../img/fleet/new-big.png) repeat-x left center;
+max-width: 100px;
+height: 24px;
+text-align:center;
+vertical-align: middle;
+line-height: 24px;
+}
+
+.fleet-buy-small::before{
+    content: url(../img/fleet/new-arrr.png) no-repeat left center;
+    width: 24px;
+    height: 24px;
+    float: left;
+    position: absolute;
+    left: 0px;
+}
+
+.fleet-buy-small::after{
+    content: url(../img/fleet/new-arr.png) no-repeat right center;
+    width: 10px;
+    height: 24px;
+    float: right;
+    position: relative;
+    top: -24px;
+    right: -10px;
+}
+
+.fleet-buy-left {
+background: url(../img/fleet/new-big4.png) no-repeat left center;
+height: 24px;
+display: inline-block;
+width: 25px;
+float: left;
+line-height: 14px;
+}
+
+.fleet-buy-right {
+background: url(../img/fleet/new-big.png) no-repeat right center;
+height: 24px;
+display: inline-block;
+width: 10px;
+float: left;
+line-height: 14px;
+}
+
+.fleet-element img {
+width: 100px;
+height: 100px;
+}
+
+.fleet-content-padding {
+padding: 0px 5px;
+}
+
+.fleet-element-count {
+display:block;
+position: absolute;
+margin-top: -23px;
+height: 20px;
+background: rgba(0,0,0, 0.6);
+color: #fff;
+text-align:center;
+font-size: 12pt;
+width: 100px;
+}
+
+.fleet-element-buy {
+display:none;
+width: 100px;
+height: 100px;
+background: url(../img/fleet/new-input.png) no-repeat center center;
+position: absolute;
+margin-top: -104px;
+z-index: 2;
+}
+
+.fleet-element:hover > .fleet-element-buy {
+display:block;
+}
+
+.shipyard-list-title {
+padding: 10px 0px 10px 10px;
+font-size: 12pt;
+color: #FFF;
+font-weight: bold;
+line-height: 24px;
+display:inline-block;
+}
+
+.object-building {
+width: 60px;
+display:inline;
+margin-right: 5px;
+}
+
+.count {
+font-size: 10pt;
+color: #14abb9;
+font-weight: bold;
+}
+
+.numeric {
+width: 25px !important;
+display: inline-block;
+vertical-align: middle;
+line-height: 14px;
+}
+
+.numeric small {
+color: #9ca2a9;
+}
+
+
+small {
+color: #9ca2a9;
+}
+
+
+.block-close {
+background: url(../img/fleet/close2.png) no-repeat;
+width: 22px;
+height: 22px;
+position:absolute;
+right: 0px;
+margin-right: 65px;
+margin-top: 10px;
+cursor: pointer;
+}
+
+
+.thumbnail {
+display:inline;
+vertical-align: middle;
+}
+
+.thumbnail img {
+width: 50px;
+height: 50px;
+display:inline;
+vertical-align: middle;
+margin: 5px 12px;
+}
+
+.metal-counts {
+background: url(../img/fleet/metal-small.png) no-repeat 10px center;
+padding-left: 30px;
+margin: 0px 5px 0px 0px;
+font-weight: 300;
+display:inline-block;
+color: #c5c5c0;
+}
+
+.vespen-counts {
+background: url(../img/fleet/vespen-small.png) no-repeat 10px center;
+padding-left: 30px;
+margin: 0px 5px 0px 0px;
+font-weight: 300;
+display:inline-block;
+color: #91c6a7;
+}
+
+.mineral-counts {
+background: url(../img/fleet/mineral-small.png) no-repeat 10px center;
+padding-left: 30px;
+margin: 0px 5px 0px 0px;
+font-weight: 300;
+color: #13a4b2;
+display:inline-block;
+}
+
+.time-counts {
+background: url(../img/fleet/clock.png) no-repeat 10px center;
+padding-left: 30px;
+margin: 0px 7px 0px 0px;
+font-weight: 300;
+display:inline-block;
+}
+
+.shipyard-filter a {
+color: #13a4b2;
+font-size: 10pt;
+line-height: 20px;
+text-decoration:underline;
+}
+
+.shipyard-filter p {
+padding: 10px 5px;
+}
+
+
+
+.shipyard-list {
+width: 625px;
+float:left;
+}
+
+.shipyard-block {
+width: 625px;
+margin: 20px 0px;
+}
+
+.shipyard-content {
+background: #011E3A;
+min-height: 20px;
+border-radius: 10px;
+padding-bottom: 5px;
+margin-bottom: 10px;
+}
+#shipyard_1_open{
+    display: none;
+}
+
+
+.shipyard-filter {
+float: left;
+width: 152px;
+min-height: 400px;
+margin-right: 10px;
+/*margin-left: 15px;*/
+}
+
+
+.shipyard-filter-img {
+display:inline-block;
+width: 60px;
+height: 60px;
+}
+
+.shipyard-filter img {
+width: 50px;
+height: 50px;
+margin: 5px 4px 5px 8px;
+cursor: pointer;
+}
+
+.shipyard-info img {
+width: 30px;
+height: 30px;
+vertical-align: middle;
+margin: 0px 7px;
+}
+
+.shipyard-content-bg {
+margin: 0px 5px;
+padding: 5px 5px;
+background: #031220;
+}
+
+.switcher {
+width: 80px;
+margin: 5px 0px;
+}
+
+
+.fly-element {
+display:inline-block;
+margin: 4px 4px;
+vertical-align: bottom;
+}
+
+.fly-element img {
+max-width: 32px;
+max-height: 26px;
+vertical-align:middle;
+}
+
+.fly-element-count {
+display: block;
+color: #4C6469;
+text-align: center;
+width: 26px;
+margin-top: -10px;
+font-size: 7pt;
+position: absolute;
+}
+
+.fly-element-more {
+display:inline-block;
+}
+
+.fleet-more-count {
+background: #7d4110;
+color: #FFF;
+display: block;
+margin-top: -24px;
+font-size: 7pt;
+padding: 0px 0px;
+position: absolute;
+border-radius: 50%;
+text-align: center;
+margin-left: 7px;
+width: 11px;
+}
+
+.fly-element-more img {
+}
+
+
+.fleet-content-bg {
+background: #031220;
+margin: 0px 7px;
+padding: 0px 0px;
+}
+.fleet-by-small-container{
+    height: 100px;
+    top: -104px;
+    position: relative;
+}
+
+.fleet-fly-info {
+background: #031220 url(../img/fleet/fleet-fly-info.png) no-repeat;
+height: 36px;
+margin: 0px 0px;
+padding: 2px 15px;
+}
+
+.info-top{
+    padding-top: 8px;
+}
+
+
+.fleet-numerals, .fleet-sprites {
+background: #020d16;
+width: 100%;
+display:inline-block;
+vertical-align: top;
+padding: 5px;
+}
+
+.fleet-statistics {
+padding: 10px;
+}
+
+.fleet-statistics p {
+float: left;
+width: 280px;
+margin-right: 20px;
+}
+
+.fleet-counter {
+color: #4c6469;
+}
+
+.fleet-info-table {
+color: #cef8ff;
+display:inline-block;
+}
+
+.fleet-info-table tr {
+font-size: 7pt;
+line-height: 7px;
+margin-top: 5px;
+}
+
+.fleet-info-table  td {
+padding: 2px 5px;
+}
+
+.fleet-percent {
+color: #cef8ff;
+font-size: 20pt;
+line-height: 28px;
+vertical-align: top;
+padding-left: 10px;
+}
+
+
+.fleet-return {
+background: url(../img/fleet/return.png) no-repeat;
+width: 22px;
+height: 22px;
+position:absolute;
+right: 0px;
+margin-right: 14px;
+margin-top: 14px;
+cursor: pointer;
+}
+
+
+.fleet-switcher {
+width: 160px;
+margin: 5px 0px;
+font-size: 10pt;
+color: #fff;
+display:inline-block;
+float:right;
+margin-top: 15px;
+cursor: pointer;
+}
+
+.fleet-switcher a {
+color: #fff;
+text-decoration: none;
+}
+
+a.deactivate {
+color: #05576a;
+}
+
+.fleet-res {
+display:inline-block;
+float:right;
+margin-top: 10px;
+}
+
+.fleet-info-fly {
+background: #031220 url(../img/fleet/fly-bg.png) no-repeat top center;
+height: 70px;
+padding: 5px 15px;
+}
+
+
+.planet-name-time {
+display:inline-block;
+}
+
+.planet-player {
+display:block;
+color: #14abb9;
+font-size: 11pt;
+height: 16px;
+}
+
+.planet-name {
+display:block;
+padding-top: 0px;
+vertical-align:middle;
+height: 16px;
+}
+
+.planet-time {
+display:block;
+padding-top: 2px;
+font-size: 10pt;
+color: #4C6469;
+height: 16px;
+}
+
+.first-planet {
+width: 110px;
+float:left;
+vertical-align: middle;
+text-align:right;
+}
+
+.second-planet {
+width: 120px;
+float:left;
+vertical-align: middle;
+text-align:left;
+}
+
+.planet1 {
+display:inline-block;
+float: right;
+margin-left: 5px;
+margin-top: 10px;
+}
+
+.planet2 {
+display:inline-block;
+float:left;
+margin-right: 5px;
+margin-top: 10px;
+}
+
+.fly-line {
+background: url(../img/fleet/fly-line.png) no-repeat center center;
+width: 520px;
+float:left;
+height: 26px;
+margin-top: 10px;
+vertical-align: middle;
+}
+
+.fly-line2 {
+background: url(../img/fleet/fly-line2.png) no-repeat center center;
+width: 520px;
+float:left;
+height: 26px;
+margin-top: 10px;
+vertical-align: middle;
+}
+
+.fleet-icon {
+background: url(../img/fleet/fleet-icon.png) no-repeat center center;
+width: 26px;
+height: 17px;
+position: absolute;
+margin-left: 360px;
+margin-top: 5px;
+}
+
+.fleet-icon2 {
+background: url(../img/fleet/fleet-icon2.png) no-repeat center center;
+width: 26px;
+height: 17px;
+position: absolute;
+margin-left: 50px;
+margin-top: 5px;
+}
+
+.fleet-sprites p {
+padding: 10px 4px;
+font-size: 11pt;
+}
+
+.fleet-sprites li {
+width: 45px;
+height: 46px;
+display: block;
+float:left;
+margin: 8px 0px;
+margin-right: 3px;
+list-style:none;
+cursor: pointer;
+background: url(../img/fleet/fleet-sprites.png) no-repeat;
+}
+
+.fleet-sprites li:first-child {
+margin-left: 4px;
+}
+
+
+.fleet-sprites li:last-child {
+margin-right: 0px;
+}
+
+li.fleet-sprite1 {
+background-position: 0px -95px;
+}
+
+li.fleet-sprite1:hover {
+background-position: 0px -48px;
+}
+
+li.fleet-sprite1.active {
+background-position: 0px 0px;
+}
+
+
+li.fleet-sprite2 {
+background-position: -48px -95px;
+}
+
+li.fleet-sprite2:hover {
+background-position: -48px -48px;
+}
+
+li.fleet-sprite2.active {
+background-position: -48px -0px;
+}
+
+li.fleet-sprite3 {
+background-position: -96px -95px;
+}
+
+li.fleet-sprite3:hover {
+background-position: -96px -48px;
+}
+
+li.fleet-sprite3.active {
+background-position: -96px 0px;
+}
+
+li.fleet-sprite4 {
+background-position: -143px -95px;
+}
+
+li.fleet-sprite4:hover {
+background-position: -143px -48px;
+}
+
+li.fleet-sprite4.active {
+background-position: -143px 0px;
+}
+
+li.fleet-sprite5 {
+background-position: -191px -95px;
+}
+
+li.fleet-sprite5:hover {
+background-position: -191px -48px;
+}
+
+li.fleet-sprite5.active {
+background-position: -191px 0px;
+}
+
+li.fleet-sprite6 {
+background-position: -239px -95px;
+}
+
+li.fleet-sprite6:hover {
+background-position: -239px -48px;
+}
+
+li.fleet-sprite6.active {
+background-position: -239px 0px;
+}
+
+li.fleet-sprite7 {
+background-position: -287px -95px;
+}
+
+li.fleet-sprite7:hover {
+background-position: -287px -48px;
+}
+
+li.fleet-sprite7.active {
+background-position: -287px 0px;
+}
+
+li.fleet-sprite8 {
+background-position: -335px -95px;
+}
+
+li.fleet-sprite8:hover {
+background-position: -335px -48px;
+}
+
+li.fleet-sprite8.active {
+background-position: -335px 0px;
+}
+
+li.fleet-sprite9 {
+background-position: -382px -95px;
+}
+
+li.fleet-sprite9:hover {
+background-position: -382px -48px;
+}
+
+li.fleet-sprite9.active {
+background-position: -382px 0px;
+}
+
+li.fleet-sprite10 {
+background-position: -430px -95px;
+}
+
+li.fleet-sprite10:hover {
+background-position: -430px -48px;
+}
+
+li.fleet-sprite10.active {
+background-position: -430px 0px;
+}
+
+li.fleet-sprite11 {
+background-position: -478px -95px;
+}
+
+li.fleet-sprite11:hover {
+background-position: -478px -48px;
+}
+
+li.fleet-sprite11.active {
+background-position: -478px 0px;
+}
+
+li.fleet-sprite12 {
+background-position: -526px -95px;
+}
+
+li.fleet-sprite12:hover {
+background-position: -526px -48px;
+}
+
+li.fleet-sprite12.active {
+background-position: -526px 0px;
+}
+
+li.fleet-sprite13 {
+background-position: -574px -95px;
+}
+
+li.fleet-sprite13:hover {
+background-position: -574px -48px;
+}
+
+li.fleet-sprite13.active {
+background-position: -574px 0px;
+}
+
+li.fleet-sprite14 {
+background-position: -621px -95px;
+}
+
+li.fleet-sprite14:hover {
+background-position: -621px -48px;
+}
+
+li.fleet-sprite14.active {
+background-position: -621px 0px;
+}
+
+li.fleet-sprite15 {
+background-position: -669px -95px;
+}
+
+li.fleet-sprite15:hover {
+background-position: -669px -48px;
+}
+
+li.fleet-sprite15.active {
+background-position: -669px 0px;
+}
+
+li.fleet-sprite16 {
+background-position: -716px -95px;
+}
+
+li.fleet-sprite16:hover {
+background-position: -716px -48px;
+}
+
+li.fleet-sprite16.active {
+background-position: -716px 0px;
+}
+
+
+
+img.clickme {
+width: 12px;
+height: 14px;
+margin: 0px 5px;
+cursor: pointer;
+vertical-align: middle;
+}
+
+.toggle {
+width: 23px;
+height: 15px;
+background: #182e44;
+border-radius: 15px;
+display:inline-block;
+vertical-align: middle;
+}
+
+.toggle-light .toggle-select .toggle-on, .toggle-light .toggle-select .toggle-off {
+background: #182e44 !important;
+}
+
+.toggle-light .toggle-select .toggle-inner {
+background: #182e44  !important;
+}
+
+.toggle-light .toggle-select .toggle-inner .active {
+background: #fff  !important;
+border-radius: 15px !important;
+}
+
+
+.toggle-light .toggle-slide {
+box-shadow: 0px 0px 0px 0px #999 !important;
+border-radius: 100px;
+}
+
+.select-counts {
+background: #fff;
+width: 89px;
+height: 25px;
+display:inline-block;
+border-radius: 5px;
+}
+
+.select-counts2 {
+background: #2d525a;
+width: 142px;
+height: 25px;
+display:inline-block;
+border-radius: 5px;
+}
+
+.counts {
+width: 45px; 
+height: 20px;
+background: #000;
+color: #fff;
+text-align:center;
+border: none;
+margin: 2px;
+}
+
+.counts2 {
+width: 96px; 
+height: 21px;
+background: #031220;
+color: #fff;
+text-align:center;
+border: none;
+margin: 2px 2px;
+}
+
+.order-building {
+display:inline;
+float:right;
+margin: 15px;
+}
+
+.select-button {
+color: #000;
+font-size: 14pt;
+font-weight: bold;
+cursor: pointer;
+width: 20px;
+height: 25px;
+display:inline-block;
+margin: -2px 0px 0px 0px;
+padding: 0px 5px 0px 5px;
+vertical-align:middle;
+}
+
+.select-button2 {
+color: #000;
+font-size: 14pt;
+font-weight: bold;
+cursor: pointer;
+width: 20px;
+height: 25px;
+display:inline-block;
+margin: -2px 0px 0px 0px;
+padding: 0px 5px 0px 5px;
+vertical-align:middle;
+}
+
+.plus {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+float:right;
+}
+
+.minus {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+float:left;
+}
+
+.building-counts {
+width: 140px;
+float:left;
+margin-top: 0px;
+}
+
+
+.building-counts2 {
+width: 124px;
+float:left;
+margin: 20px 34px 20px 5px;
+}
+
+
+.fleet-element .select-counts {
+width: 100px;
+text-align:center;
+margin: 37px auto;
+background: transparent;
+}
+
+.fleet-element .select-button {
+color: #fff;
+font-size: 21pt;
+font-weight: bold;
+cursor: pointer;
+width: 20px;
+height: 25px;
+display:inline-block;
+margin: 0px 0px 0px 0px;
+padding: 0px 5px 0px 5px;
+vertical-align:middle;
+}
+
+.fleet-element .plus {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+float:right;
+right: 10px;
+position: absolute;
+margin-top: -40px;
+}
+
+.fleet-element .minus {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+float: left;
+left: 10px;
+position: absolute;
+margin-top: -40px;
+}
+
+.fleet-element .zero {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+left: 10px;
+width: 25px;
+position: absolute;
+font-size: 12pt;
+margin-top: 40px;
+}
+
+.fleet-element .max {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+right: 20px;
+width: 25px;
+position: absolute;
+font-size: 12pt;
+margin-top: 40px;
+}
+
+.fleet-element .building-counts {
+width: 120px;
+float:left;
+margin-top: 0px;
+}
+
+.fleet-element .counts {
+width: 50px;
+height: 20px;
+background: transparent;
+color: #000;
+font-weight: bold;
+font-size: 12pt;
+text-align: center;
+border: medium none;
+margin: 2px auto;
+}
+
+.building-button-active {
+text-align:center;
+line-height: 30px;
+height: 30px;
+width: 85px;
+display:inline-block;
+background:  #469f72;
+border-radius: 5px;
+font-weight: 600;
+cursor: pointer;
+margin-left: 10px;
+color: #fff;
+margin-top: -3px;
+}
+
+.building-button-disable {
+text-align:center;
+line-height: 30px;
+height: 30px;
+width: 85px;
+display:inline-block;
+background:  #aa3c51;
+border-radius: 5px;
+font-weight: 600;
+cursor: pointer;
+margin-left: 10px;
+color: #bf6d7d;
+margin-top: -3px;
+}
+
+.disable-text { 
+background-color:  #aa3c51;
+border-radius: 5px;
+color: #bf6d7d;
+padding: 0px 5px;
+}
+
+
+.fleet-start {
+width: 180px;
+height: 100px;
+float:left;
+text-align:center;
+margin: 10px 10px 30px 10px;
+}
+
+.fleet-distance {
+background: url(../img/fleet/double-arrow.png) no-repeat center center;
+width: 111px;
+height: 40px;
+float:left;
+text-align:center;
+margin: 42px 10px 0px 10px;
+}
+
+
+.fleet-destination {
+width: 180px;
+height: 100px;
+float:left;
+text-align:center;
+margin: 10px 10px 30px 10px;
+}
+
+.fleet-destination .fleet-time {
+border: 2px solid #2d525a;
+padding: 0px 5px;
+}
+
+
+.fleet-start-icons li {
+background: url(../img/fleet/planet-icons.png) no-repeat;
+display:inline-block;
+width: 50px;
+height: 40px;
+margin: 10px 0px;
+cursor: pointer;
+}
+
+li.fleet-start-icon1 {
+background-position: 0px -40px;
+}
+
+li.fleet-start-icon2 {
+background-position: -55px -40px;
+}
+
+li.fleet-start-icon3 {
+background-position: -110px -40px;
+}
+
+li.fleet-start-icon1.active {
+background-position: 0px 0px;
+}
+
+li.fleet-start-icon2.active {
+background-position: -55px 0px;
+}
+
+li.fleet-start-icon3.active {
+background-position: -110px 0px;
+}
+
+.fleet-my-planets {
+width: 190px;
+height: 100px;
+float:right;
+padding: 5px;
+line-height: 32px;
+}
+
+
+.fleet-select1 select {
+background: transparent;
+width: 180px;
+padding: 0px;
+font-size: 11pt;
+border: 0;
+border-radius: 0;
+height: 20px;
+line-height: 0px;
+-webkit-appearance: none;
+color: #fff;
+}
+
+.fleet-select2 select {
+background: transparent;
+width: 80px;
+padding: 0px;
+font-size: 11pt;
+border: 0;
+border-radius: 0;
+height: 20px;
+line-height: 0px;
+-webkit-appearance: none;
+color: #fff;
+}
+
+
+
+.fleet-select1 {
+width: 162px;
+height: 25px;
+overflow: hidden;
+background: url(../img/fleet/select.png) no-repeat 142px center;
+border: 2px solid #2D525A;
+padding: 0px 0px;
+color: #fff;
+line-height: 0px;
+}
+
+.fleet-select2 {
+width: 62px;
+height: 25px;
+overflow: hidden;
+background: url(../img/fleet/select.png) no-repeat 42px center;
+border: 2px solid #2D525A;
+padding: 0px 0px;
+color: #fff;
+line-height: 0px;
+}
+
+.select-speed {
+display: inline-block;
+vertical-align: middle;
+}
+
+.input-small {
+width: 45px;
+height: 25px;
+border: 2px solid #2D525A;
+text-align: center;
+color: #fff;
+padding-left: 10px;
+}
+
+.speed-res {
+background: url(../img/fleet/input-crystal.png) no-repeat 4px center;
+}
+
+
+.metal-input {
+background: #031220 url(../img/fleet/metal-small.png) no-repeat 8px center;
+padding-left: 0px;
+}
+
+.vespen-input {
+background: #031220 url(../img/fleet/vespen-small.png) no-repeat 8px center;
+padding-left: 0px;
+color: #91C6A7;
+}
+
+.mineral-input {
+background: #031220 url(../img/fleet/mineral-small.png) no-repeat 8px center;
+padding-left: 0px;
+color: #13a4b2;
+}
+
+.fleet-speed {
+width: 260px;
+height: 100px;
+float: left;
+margin: 20px 10px;
+}
+
+.fleet-speed input, .fleet-speed select, button {
+font-weight: bold;
+font-family: "DINPro Regular";
+}
+
+.fleet-resurs {
+width: 490px;
+height: 100px;
+display:inline-block;
+margin-right: 0px;
+}
+
+.grabezh {
+float: right;
+margin-right: 14px;
+}
+
+.yellow-button {
+background: url(../img/fleet/yellow-button.png) no-repeat center center;
+width: 96px;
+height: 30px;
+border: none;
+font-weight: bold;
+font-size: 10pt;
+}
+
+.fleet-statistics .yellow-button {
+float: right;
+margin-top: -14px;
+}
+   
+.shipyard-list-res-info {
+width: 520px;
+float: right;
+}
+
+
+.shipyard-list-res {
+background: none repeat scroll 0% 0% #020D16;
+width: 520px;
+margin: 5px 0px 5px 0px;
+height: 40px;
+font-size: 12pt;
+}
+
+.shipyard-list-res img {
+width: 25px;
+height: 25px;
+vertical-align: middle;
+margin: 10px;
+}
+
+.from-count {
+float:right;
+vertical-align:middle;
+margin: 10px;
+}
+
+.clear {
+display: block;
+height: 0px;
+margin: 0px;
+clear: both;
+}
+
+.green {
+color: #469f72;
+font-weight: bold;
+}
+
+.red {
+color: #aa3c51;
+font-weight: bold;
+}
+
+
+
+.disable-layer, .view-layer {
+display: none;
+position: absolute;
+margin-top: -55px;
+margin-left: 12px;
+}
+
+.shipyard-filter .disable-layer, .shipyard-filter .view-layer {
+display: none;
+position: absolute;
+margin-top: -59px !important; 
+margin-left: 8px;
+}
+
+.disable .disable-layer {
+display: block;
+height: 50px;
+width: 50px;
+background: url(../img/fleet/disable.png) no-repeat;
+}
+
+.view .view-layer {
+display: block;
+height: 50px;
+width: 50px;
+background: #000 url(../img/fleet/eye.png) no-repeat center center;
+opacity: 0.7;
+display: none;
+}
+
+
+.view .view-layer-non{
+display: block;
+height: 50px;
+width: 50px;
+background: url(../img/fleet/eye.png) no-repeat center center;
+position: relative;
+top: -59px;
+left: 8px;
+} 
+
+
+
+@media screen and (max-width: 1024px){
+.shipyard-responsive {
+display: none;
+position: absolute;
+top: 100px;
+margin-left: 100px;
+width: 518px;
+margin-right: 10%;
+height: auto;
+min-height: 400px;
+font-family: "DINPro Regular";
+letter-spacing: 1px;
+font-weight: normal;
+font-size: 11pt;
+color: #FFF;
+}
+
+
+
+.shipyard-responsive .shipyard-filter {
+width: 518px;
+min-height: 200px;
+margin-right: 20px;
+float: none;
+}
+
+
+.shipyard-responsive .shipyard-filter-img {
+display: block;
+float:left;
+}
+
+
+.shipyard-responsive .shipyard-filter img {
+width: 50px;
+height: 50px;
+margin: 0px 2px 0px 2px;
+cursor: pointer;
+}
+
+.shipyard-responsive .shipyard-info img {
+width: 30px;
+height: 30px;
+vertical-align: middle;
+margin: 0px 7px;
+}
+
+.shipyard-responsive .disable-layer, .view-layer {
+display: none;
+position: absolute;
+margin-top: -50px;
+margin-left: 6px;
+}
+
+.shipyard-responsive .shipyard-filter .disable-layer, .shipyard-filter .view-layer {
+display: none;
+position: absolute;
+margin-top: -53px !important; 
+margin-left: 2px;
+}
+
+.shipyard-responsive .disable .disable-layer {
+display: block;
+height: 50px;
+width: 50px;
+background: url(../img/fleet/disable.png) no-repeat;
+}
+
+.shipyard-responsive .view .view-layer {
+display: block;
+height: 50px;
+width: 50px;
+background: #000 url(../img/fleet/eye.png) no-repeat center center;
+opacity: 0.7;
+}
+
+
+.shipyard-responsive .shipyard-content-bg {
+margin: 0px 5px;
+padding: 10px 8px;
+background: #031220;
+}
+
+
+.shipyard-responsive .shipyard-info {
+width: 518px;
+margin-bottom: 20px;
+}
+
+
+.shipyard-responsive .shipyard-list {
+width: 518px;
+float: none;
+}
+
+.shipyard-responsive .shipyard-block {
+width: 518px;
+margin: 20px 0px;
+}
+
+.shipyard-responsive .shipyard-content {
+background: #011E3A;
+min-height: 20px;
+padding: 5px 0;
+border-radius: 10px;
+margin-bottom: 10px;
+}
+
+
+.shipyard-responsive .shipyard-list-title {
+padding: 10px 0px 10px 10px;
+font-family: "DINPro Regular";
+letter-spacing: 0px;
+font-size: 12pt;
+}
+
+.shipyard-responsive .shipyard-title {
+padding: 6px 0px 8px 10px;
+font-family: "DINPro Regular";
+letter-spacing: 0px;
+font-size: 12pt;
+}
+
+.shipyard-responsive .count {
+font-size: 11pt;
+color: #14abb9;
+}
+
+.shipyard-responsive .thumbnail {
+float:left;
+display: inline-block;
+vertical-align: top;
+}
+
+.shipyard-responsive .thumbnail img {
+width: 115px;
+height: 115px;
+display: inline;
+vertical-align: middle;
+margin: 5px 4px;
+}
+
+.shipyard-responsive .thumbnail.disable-building  img {
+width: 113px;
+height: 113px;
+display: inline;
+vertical-align: middle;
+margin: 5px 4px;
+border: 2px solid #5d7476;
+border-radius: 5px;
+}
+
+
+.shipyard-responsive .all-time {
+position: absolute;
+right: 0px;
+margin-right: 14px;
+margin-top: 10px;
+}
+
+
+
+.shipyard-responsive .block-close {
+background: url("../img/fleet/close2.png") no-repeat scroll 0% 0% transparent;
+width: 22px;
+position: absolute;
+right: 0px;
+margin-right: 14px;
+margin-top: 14px;
+cursor: pointer;
+height: 22px;
+}
+
+
+.shipyard-responsive .building-button-active {
+text-align: center;
+line-height: 30px;
+height: 34px;
+width: 115px;
+display: inline-block;
+background: none repeat scroll 0% 0% #469F72;
+border-radius: 5px;
+font-weight: 700;
+cursor: pointer;
+margin-left: 0px;
+color: #FFF;
+margin-top: 4px;
+font-size: 14pt;
+line-height: 0px;
+}
+
+
+.shipyard-responsive .order-building {
+display: inline-block;
+float: left;
+margin: 2px;
+float: none;
+display: block;
+width: 115px;
+}
+
+.shipyard-responsive .shipyard-block-info {
+display: inline-block;
+width: 360px;
+margin: 0px 0px 0px 0px;
+}
+
+.shipyard-block-info-title {
+display:block;
+margin: 5px 0px 15px 0px;
+font-size: 11pt;
+}
+
+
+.shipyard-responsive  .price {
+display: block;
+width: 80px;
+margin-left: 10px;
+margin-right: 20px;
+float: left;
+}
+
+.shipyard-responsive .price span {
+display:block;
+margin: 3px 0px 0px 0px;
+font-family: "DINPro Regular";
+letter-spacing: 0px;
+font-size: 12pt;
+line-height: 20px;
+}
+
+.shipyard-responsive .characteristic {
+display: block;
+width: 245px;
+float: right;
+}
+
+.shipyard-responsive .characteristic span {
+display:block;
+margin: 5px 0px;
+font-weight: bold;
+}
+
+.shipyard-responsive .characteristic ul {
+display:inline-block;
+margin: 0px 0px;
+}
+
+.shipyard-responsive .characteristic ul li {
+margin: 0px 0px 3px 0px;
+line-height: 20px;
+font-size: 11pt;
+font-family: "DINPro Light";
+letter-spacing: 0px;
+font-weight: 500;
+}
+
+.shipyard-responsive .characteristic ul.char1 {
+display:inline-block;
+width: 100px;
+}
+
+.shipyard-responsive .characteristic ul.char2 {
+display:inline-block;
+width: 140px;
+}
+
+.shipyard-responsive .metal-counts, .shipyard-responsive .mineral-counts, .shipyard-responsive .time-counts {
+background-position: 0px center;
+padding-left: 20px;
+}
+
+.shipyard-responsive .shipyard-list-res-info {
+width: 360px;
+float: none;
+display: inline-block;
+}
+
+.shipyard-responsive .shipyard-list-res {
+background: none repeat scroll 0% 0% #020D16;
+width: 360px;
+margin: 5px 2px;
+height: 40px;
+font-size: 10pt;
+}
+
+
+.shipyard-responsive .shipyard-list-res-info p, .shipyard-responsive .shipyard-block-info p {
+padding: 5px 10px;
+display:block;
+clear: both;
+font-size: 11pt;
+font-family: "DINPro Light";
+letter-spacing: 0px;
+font-weight: 500;
+}
+
+
+.shipyard-responsive .select-counts {
+background: #fff;
+width: 86px;
+height: 25px;
+display:inline-block;
+border-radius: 5px;
+}
+
+.shipyard-responsive .building-counts {
+width: 117px;
+float: none;
+margin: 5px auto;
+}   
+
+.shipyard-responsive .counts {
+width: 42px;
+}   
+    
+
+.block-question {
+background: url("../img/fleet/question.png") no-repeat scroll 0% 0% transparent;
+width: 22px;
+cursor: pointer;
+height: 22px;
+margin: 3px 0px;
+display:block;
+}
+
+input[type=radio], input[type=checkbox] {
+display:none;
+}
+input[type=radio] + label:before {
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+margin-right: 5px;
+border: 2px solid #2D525A;
+line-height: 14px;
+float: left;
+}
+input[type=checkbox] + label:before {
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+margin-right: 5px;
+border: 2px solid #2D525A;
+line-height: 14px;
+float: left;    
+}
+input[type=radio]:checked + label:before {
+content: "■";
+color: #14abb9;
+font-size:1.8em;
+text-align:center;
+line-height: 5px;
+cursor: pointer;
+}
+input[type=checkbox]:checked + label:before {
+content:"■";
+color: #14abb9;
+text-align:center;
+line-height: 5px;
+cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+display: block;
+line-height: 12px;
+cursor: pointer;
+}
+}
+@media screen and (max-width: 600px){
+    .shipyard-responsive, .shipyard-info, .shipyard-filter, .shipyard-block{
+        width: 98%!important;
+        display: block!important;
+        top: 160px;
+        margin-left: 0;
+    }
+    .shipyard{
+        display: none!important;
+    }
+}
+@media screen and (min-width: 621px) and (max-width: 639px) and (min-height: 625px){
+    .shipyard-responsive, .shipyard-info, .shipyard-filter, .shipyard-block{
+        width: 99%!important;
+        display: block!important;
+        top: 520px!important;
+        margin-left: 0;
+    }
+    .shipyard{
+        display: none!important;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 639px){
+    .shipyard-responsive, .shipyard-info, .shipyard-filter, .shipyard-block{
+        width: 99%!important;
+        display: block!important;
+        top: 160px;
+        margin-left: 0;
+    }
+    .shipyard{
+        display: none!important;
+    }
+}
+@media(min-width: 640px) and (max-width: 800px) and (max-height: 624px){
+    .shipyard-responsive{
+        width: 95%!important;
+        display: block!important;
+        position: absolute;
+        right: 0;
+        float: right;
+        top: 160px;
+        margin-left: 100px;
+        width: 518px;
+        margin-right: 3%;
+        height: auto;
+        min-height: 400px;
+        font-family: "DINPro Regular";
+        letter-spacing: 1px;
+        font-weight: normal;
+        font-size: 10pt;
+        color: #FFF;
+
+    }
+    .shipyard-info, .shipyard-filter, .shipyard-block{
+        width: 100%!important;
+        margin-left: 0;
+    }
+    .shipyard{
+        display: none!important;
+    }
+}
+@media(min-width: 640px) and (max-width: 800px) and (min-height: 625px){
+    .shipyard-responsive{
+        width: 70%!important;
+        display: block!important;
+        position: absolute;
+        right: 0;
+        float: right;
+        top: 100px;
+        margin-left: 100px;
+        width: 518px;
+        margin-right: 3%;
+        height: auto;
+        min-height: 400px;
+        font-family: "DINPro Regular";
+        letter-spacing: 1px;
+        font-weight: normal;
+        font-size: 10pt;
+        color: #FFF;
+
+    }
+    .shipyard-info, .shipyard-filter, .shipyard-block{
+        width: 100%!important;
+        margin-left: 0;
+    }
+    .shipyard{
+        display: none!important;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1023px) and (max-height: 624px){
+    .shipyard-responsive{
+        width: 626px!important;
+        display: block!important;
+        position: absolute;
+        right: 0;
+        float: right;
+        top: 160px;
+        margin-left: 100px;
+        margin-right: 18%;
+        height: auto;
+        min-height: 400px;
+        font-family: "DINPro Regular";
+        letter-spacing: 1px;
+        font-weight: normal;
+        font-size: 10pt;
+        color: #FFF;
+
+    }
+    .shipyard-responsive .shipyard-list-res{
+        width: 475px!important;
+    }
+    .shipyard-info, .shipyard-filter, .shipyard-block{
+        width: 100%!important;
+    }
+    .shipyard{
+        display: none!important;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1023px) and (min-height: 625px){
+    .shipyard-responsive{
+        width: 73%!important;
+        display: block!important;
+        position: absolute;
+        right: 0;
+        float: right;
+        top: 100px;
+        margin-left: 100px;
+        width: 518px;
+        margin-right: 3%;
+        height: auto;
+        min-height: 400px;
+        font-family: "DINPro Regular";
+        letter-spacing: 1px;
+        font-weight: normal;
+        font-size: 11pt;
+        color: #FFF;
+
+    }
+    .shipyard-info, .shipyard-filter, .shipyard-block{
+        width: 100%!important;
+    }
+    .shipyard{
+        display: none!important;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) and (max-height: 624px){
+    .shipyard-responsive{
+        display: none!important;
+    }
+    .shipyard{
+        display: block!important;
+        width: 830px;
+        margin-left: 13%;
+    }
+    .shipyard-list, .shipyard-block{
+        width: 645px;
+    }
+    .block-close{
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+    .shipyard-list-res-info{
+        width: 475px;
+    }
+    .shipyard-list-res{
+        width: 470px;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) and (min-height: 625px){
+    .shipyard-responsive{
+        display: none!important;
+    }
+    .shipyard{
+        display: block!important;
+        width: 750px;
+        margin-left: 25%;
+    }
+    .shipyard-list, .shipyard-block{
+        width: 572px;
+    }
+    .block-close{
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+    .shipyard-list-res-info{
+        width: 475px;
+    }
+    .shipyard-list-res{
+        width: 470px;
+    }
+}
+@media screen and (min-width: 1280px){
+    .shipyard-responsive{
+        display: none!important;
+    }
+    .shipyard{
+        display: block!important;
+        margin-left: 22%;
+    }
+}
+
+input[type=radio], input[type=checkbox] {
+display:none;
+}
+input[type=radio] + label:before {
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+margin-right: 5px;
+border: 2px solid #2D525A;
+line-height: 14px;
+float: left;
+}
+input[type=checkbox] + label:before {
+content: "";
+display: block;
+width: 10px;
+height: 10px;
+margin-right: 5px;
+border: 2px solid #2D525A;
+line-height: 14px;
+float: left;    
+}
+input[type=radio]:checked + label:before {
+content: "■";
+color: #14abb9;
+font-size:1.8em;
+text-align:center;
+line-height: 5px;
+cursor: pointer;
+}
+input[type=checkbox]:checked + label:before {
+content:"■";
+color: #14abb9;
+text-align:center;
+line-height: 5px;
+cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+display: block;
+line-height: 12px;
+cursor: pointer;
+}
+
+.display_block{
+    display: block!important;
+}
+.display_none{
+    display: none!important;
+}

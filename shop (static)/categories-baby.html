@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.formstyler.css">
+
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+
+	<!--link href="css/bootstrap.min.css" rel="stylesheet"-->
+
+
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+
+
+/* слайдер цен */
+
+jQuery("#slider").slider({
+	min: 0,
+	max: 30000,
+	values: [0,30000],
+	range: true,
+	stop: function(event, ui) {
+		jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
+		jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
+		
+    },
+    slide: function(event, ui){
+		jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
+		jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
+    }
+});
+
+jQuery("input#minCost").change(function(){
+
+	var value1=jQuery("input#minCost").val();
+	var value2=jQuery("input#maxCost").val();
+
+    if(parseInt(value1) > parseInt(value2)){
+		value1 = value2;
+		jQuery("input#minCost").val(value1);
+	}
+	jQuery("#slider").slider("values",0,value1);	
+});
+
+	
+jQuery("input#maxCost").change(function(){
+		
+	var value1=jQuery("input#minCost").val();
+	var value2=jQuery("input#maxCost").val();
+	
+	if (value2 > 30000) { value2 = 30000; jQuery("input#maxCost").val(30000)}
+
+	if(parseInt(value1) > parseInt(value2)){
+		value2 = value1;
+		jQuery("input#maxCost").val(value2);
+	}
+	jQuery("#slider").slider("values",1,value2);
+});
+
+
+
+// фильтрация ввода в поля
+	jQuery('input').keypress(function(event){
+		var key, keyChar;
+		if(!event) var event = window.event;
+		
+		if (event.keyCode) key = event.keyCode;
+		else if(event.which) key = event.which;
+	
+		if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+		keyChar=String.fromCharCode(key);
+		
+		if(!/\d/.test(keyChar))	return false;
+	
+	});
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+	<header class="header">
+		<div class="header-inner-left">
+			<div class="logo">
+				<img src="img/logo.png" alt="">
+			</div>
+			<div class="header-phone">+7 (495) 77 - 58 - 422</div>
+		</div>
+		<div class="header-inner-right">
+			<div class="enter-block">
+				<a href="" class="login">Войти</a>
+				<a href="" class="register">Регистрация</a>
+			</div>
+			<div class="basket-block">
+				<div class="items">
+					<p>Товаров: <span>5 шт.</span></p>
+				</div>
+				<div class="price">
+					<p>Сумма: <span>100 000 р.</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</header>
+	<nav class="nav">
+		<div class="navigation-container container">
+			<ul class="navigation">
+				<li><a href="">Бренды</a></li>
+				<li><a href="">Новинки</a></li>
+				<li><a href="">Коллекции</a></li>
+				<li><a href="">Акции</a></li>
+				<li><a href="">Распродажи</a></li>
+				<li><a href="">Премиум</a></li>
+			</ul>
+			<div class="nav-search">
+				<input type="text" placeholder="Я ищу...">
+				<input type="submit" value="">
+			</div>
+			<div class="clear"></div>
+		</div>
+	</nav>
+	<section class="container">
+		<div class="type-block">
+			<div class="babies">
+				<a href="">
+					<img src="img/baby.png" alt="">
+					<p>Для самых маленьких</p>
+				</a>
+			</div>
+			<div class="girls">
+				<a href="">
+					<img src="img/girls.png" alt="">
+					<p>Для девочек</p>
+				</a>
+			</div>
+			<div class="boys">
+				<a href="">
+					<img src="img/boys.png" alt="">
+					<p>Для мальчиков</p>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="main">
+			<h1 class="main-cat-baby-header">Одежда для малышей</h1>
+			<div class="block-toy">
+				<div class="baby-bottle">
+					<img src="img/baby-bottle.png" alt="">
+				</div>
+				<div class="baby-toy">
+					<img src="img/baby-toy.png" alt="">
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="breadcrumbs">
+				<a href="" class="index">Главная</a>
+				<a href="">Одежда для малышей</a>
+			</div>
+			<div class="content">
+				<div class="sidebar">
+					<p class="catalog-baby-list">От 3 до 36 месяцев</p>
+					<ul class="catalog-list">
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+					</ul>
+					<p class="catalog-baby-list">От 3 до 36 месяцев</p>
+					<ul class="catalog-list">
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+						<li><a href="">Верхняя одежда</a></li>
+						<li><a href="">Футболки, майки, водолазки</a></li>
+						<li><a href="">Рубашки</a></li>
+					</ul>
+					<div class="range-price">
+					<p class="catalog-baby-list">Цена:</p>
+						<form action="#" method="post">
+							<div class="formCost">
+								<label for="minCost">От</label> <input type="text" id="minCost" value="0"/>
+								<label for="maxCost">до</label> <input type="text" id="maxCost" value="30000"/>
+							</div>
+							<div class="sliderCont">
+									<div id="slider"></div>
+									<div class="labels">
+										<span>мин</span>
+										<span>5 000</span>
+										<span>10 000</span>
+										<span>15 000</span>
+										<span>20 000</span>
+										<span>25 000</span>
+										<span>макс</span>
+									</div>
+							</div>
+						</form>
+						
+					</div>
+					<div class="brend">
+						<p class="catalog-baby-list">Бренд:</p>
+						<ul>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox1" class="check" type="checkbox">
+								<label for="checkbox1">S'Cool</label>
+							</li>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox2" class="check" type="checkbox">
+								<label for="checkbox2">S'Cool</label>
+							</li>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox3" class="check" type="checkbox">
+								<label for="checkbox3">S'Cool</label>
+							</li>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox4" class="check" type="checkbox">
+								<label for="checkbox4">S'Cool</label>
+							</li>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox5" class="check" type="checkbox">
+								<label for="checkbox5">S'Cool</label>
+							</li>
+						</ul>
+					</div>
+					<div class="cat-size">
+						<p class="catalog-baby-list">Размер:</p>
+						<ul>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox6" class="check" type="checkbox">
+								<label for="checkbox6">80</label>
+							</li>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox7" class="check" type="checkbox">
+								<label for="checkbox7">80</label>
+							</li>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox8" class="check" type="checkbox">
+								<label for="checkbox8">93</label>
+							</li>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox9" class="check" type="checkbox">
+								<label for="checkbox9">98</label>
+							</li>
+							<li>
+								<input style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;" id="checkbox10" class="check" type="checkbox">
+								<label for="checkbox10">104</label>
+							</li>
+						</ul>
+					</div>
+					<div class="cat-sale"><a href="">Распродажа</a></div>
+					<div class="cat-rss"><a href="">Подписаться</a></div>
+				</div>
+				<div class="main-catalog">
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+					<div class="catalog-item">
+						<div class="item-container-baby">
+							<div class="catalog-img">
+								<img src="img/item-b.png" alt="">
+							</div>
+							<p class="item-name">Рубашка</p>
+							<p class="item-cat-price">1500 р.</p>
+						</div>
+						<div class="item-ref">
+							<div class="select-row row-left">
+									<span class="span-row">Размер:</span>
+												<select name="" id="" class="size" placeholder="M">
+													<option value="M">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+													<option value="">M</option>
+												</select>
+											</div>
+											<div class="select-row row-right">
+											<span class="span-row">Кол-во:</span>
+												<select name="" id="" class="count" placeholder="2">
+													<option value="1">1</option>
+													<option value="">2</option>
+													<option value="">4</option>
+													<option value="">3</option>
+												</select>
+											</div>
+											<div class="clear"></div>
+									<a href="" class="in-basket">В корзину</a>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</section>
+	<nav class="nav nav-footer">
+		<div class="navigation-container container">
+			<ul class="navigation">
+				<li><a href="">Бренды</a></li>
+				<li><a href="">Новинки</a></li>
+				<li><a href="">Коллекции</a></li>
+				<li><a href="">Акции</a></li>
+				<li><a href="">Распродажи</a></li>
+				<li><a href="">Премиум</a></li>
+			</ul>
+			<ul class="navigation navig-footer">
+				<li><a href="">Доставка</a></li>
+				<li><a href="">Оплата</a></li>
+				<li><a href="">Контакты</a></li>
+				<li><a href="">О нас</a></li>
+				<li><a href="">Возврат</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</nav>
+	<footer class="footer container">
+		<div class="footer-info">
+			<div class="footer-phone">+7 (495) 77 - 58 - 422</div>
+			<div class="footer-counts">
+				<div class="li-count">
+					<img src="img/li.png" alt="">
+				</div>
+				<div class="li-count">
+					<img src="img/li-2.png" alt="">
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="footer-social">
+				<ul class="soc">
+					<li class="twitter"><a href=""></a></li>
+					<li class="facebook"><a href=""></a></li>
+					<li class="vk"><a href=""></a></li>
+					<li class="tube"><a href=""></a></li>
+					<li class="skype"><a href=""></a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</footer>
+	<div class="footer-pay">
+		<div class="pay-container container">
+			<div class="column">
+				<p>ООО «ГазАктив»</p>
+				<p>ИНН</p>
+				<p>ОГРН</p>
+			</div>
+			<div class="column column-second">
+				<p></p>
+				<p>7701830059</p>
+				<p>1097746096777</p>
+			</div>
+			<div class="cards">
+				<img src="img/visa.png" alt="">
+				<img src="img/mc.png" alt="">
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+
+	<!-- 1. Link to jQuery (1.8 or later), -->
+	
+	<script src="js/jquery.formstyler.min.js"></script> <!-- 33 KB -->
+	<script type="text/javascript">
+		(function($) {
+			$(function() {
+			  $('input.check').styler();
+			});
+		})(jQuery);
+	</script>
+	<script type="text/javascript">
+		(function($) {
+			$(function() {
+			  $('select.size, select.count').styler();
+			});
+		})(jQuery);
+	</script>
+	
+	<script type="text/javascript"></script>
+	
+	<!-- fotorama.css & fotorama.js. -->
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+	<!--script src="js/bootstrap.min.js"></script>-->
+
+
+
+</body>
+</html>
